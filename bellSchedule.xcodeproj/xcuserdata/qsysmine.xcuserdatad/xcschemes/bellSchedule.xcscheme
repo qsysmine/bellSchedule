@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -45,6 +45,16 @@
                BlueprintIdentifier = "88BC43B91D5FCF5400FFBDEF"
                BuildableName = "bellScheduleUITests.xctest"
                BlueprintName = "bellScheduleUITests"
+               ReferencedContainer = "container:bellSchedule.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "881FF0141D60F627003AC1AC"
+               BuildableName = "BellScheduleDataKitTests.xctest"
+               BlueprintName = "BellScheduleDataKitTests"
                ReferencedContainer = "container:bellSchedule.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -4,14 +4,39 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BellScheduleDataKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>bellSchedule.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>bellScheduleWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>881FF00C1D60F627003AC1AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>881FF0141D60F627003AC1AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>881FF0371D60F8EA003AC1AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88BC439A1D5FCF5300FFBDEF</key>
 		<dict>
 			<key>primary</key>
