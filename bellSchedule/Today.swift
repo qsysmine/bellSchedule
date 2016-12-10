@@ -16,6 +16,6 @@ public class Today {
         dateFormatter.dateFormat = "EEE";
         weekday = dateFormatter.string(from: date).uppercased();
         dateFormatter.dateFormat = "dd MMM yyyy"
-        dateString = dateFormatter.string(from:date);
+        dateString = dateFormatter.string(from:date).uppercased();
     }
 }

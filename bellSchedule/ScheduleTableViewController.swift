@@ -13,6 +13,7 @@ class ScheduleTableViewController: UITableViewController {
 	
 	var data : [(String, String, String)] = [];
 	var isWeekend = false;
+	var dateString = "";
 	override func viewDidLoad() {
 		super.viewDidLoad();
 		let timer = Timer(timeInterval: 5.0, target: self, selector:#selector(refresh), userInfo: nil, repeats: true);
@@ -23,6 +24,7 @@ class ScheduleTableViewController: UITableViewController {
 		if(weekday == "SAT" || weekday == "SUN") {
 			isWeekend = true;
 		}
+		dateString = Today().dateString;
 		data = CurrentTimings().currentTimings;
 		self.tableView.reloadData();
 	}
@@ -52,7 +54,7 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath);
-		if(isWeekend){
+		if(isWeekend/*FINALS SCHEDULE*/ || dateString == "23 DEC 2016"){
 			if(indexPath.row == 0) {
 				cell.textLabel!.text = "No class today";
 				cell.textLabel!.textAlignment = .center;

@@ -9,6 +9,36 @@
 import Foundation
 
 public class Timings {
+	//FINALS SCHEDULE
+	public static let scheduleMondayFinal: [(String, String, String)] = [
+		("07:00","07:51","0 Period"),
+		("08:00","10:00","Period 7 Final"),
+		("10:20","11:00","1st Period"),
+		("11:05","11:45","2nd Period"),
+		("11:50","12:30","3rd Period"),
+		("12:30","13:10","Lunch"),
+		("13:15","13:55","4th Period"),
+		("14:00","14:40","5th Period"),
+		("14:45","15:25","6th Period")
+	];
+	public static let scheduleTuesdayFinal: [(String, String, String)] = [
+		("07:00","07:51","0 Period Final (Part I)"),
+		("08:00","10:00","Period 6 Final"),
+		("10:00", "10:15", "Break"),
+		("10:20","12:20","Period 5 Final")
+	];
+	public static let scheduleWednesdayFinal: [(String, String, String)] = [
+		("07:00","07:51","0 Period Final (Part II)"),
+		("08:00","10:00","Period 4 Final"),
+		("10:00", "10:15", "Break"),
+		("10:20","12:20","Period 3 Final")
+	];
+	public static let scheduleThursdayFinal: [(String, String, String)] = [
+		("08:00","10:00","Period 2 Final"),
+		("10:00", "10:15", "Break"),
+		("10:20","12:20","Period 1 Final")
+	];
+	//END FINALS SCHEDULE
     public static let scheduleMondayTuesdayThursday: [(String,String,String)] = [
         ("07:00","07:51","0 Period"),
         ("08:00","08:51","1st Period"),

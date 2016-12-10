@@ -11,7 +11,20 @@ public class CurrentTimings {
     public var currentTimings:[(String, String, String)];
     public init() {
         let dayOfTheWeek = Today().weekday;
-        if(dayOfTheWeek == "MON" || dayOfTheWeek == "TUE" || dayOfTheWeek == "THU") {
+		let dateString = Today().dateString;
+		//FINALS SCHEDULE
+		if(dateString == "19 DEC 2016") {
+			currentTimings = Timings.scheduleMondayFinal;
+		} else if (dateString == "20 DEC 2016") {
+			currentTimings = Timings.scheduleTuesdayFinal;
+		} else if (dateString == "21 DEC 2016") {
+			currentTimings = Timings.scheduleWednesdayFinal;
+		} else if(dateString == "22 DEC 2016") {
+			currentTimings = Timings.scheduleThursdayFinal;
+		} else if(dateString == "23 DEC 2016") {
+			currentTimings = [];
+		}
+        else /*END FINALS SCHEDULE*/if(dayOfTheWeek == "MON" || dayOfTheWeek == "TUE" || dayOfTheWeek == "THU") {
             currentTimings = Timings.scheduleMondayTuesdayThursday;
         } else if(dayOfTheWeek == "WED") {
             currentTimings = Timings.scheduleWednesday;
