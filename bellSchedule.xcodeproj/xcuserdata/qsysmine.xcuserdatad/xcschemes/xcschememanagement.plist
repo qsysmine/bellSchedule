@@ -9,15 +9,15 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>BellScheduleWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>bellSchedule.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
-		</dict>
-		<key>bellScheduleWidget.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -33,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>881FF0371D60F8EA003AC1AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8832854D1E29254C00CA9839</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>883285631E2926EB00CA9839</key>
 		<dict>
 			<key>primary</key>
 			<true/>

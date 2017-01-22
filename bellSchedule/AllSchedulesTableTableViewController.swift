@@ -13,23 +13,13 @@ class AllSchedulesTableTableViewController: UITableViewController {
 	let scheduleWednesday = Timings.scheduleWednesday;
 	let scheduleFriday = Timings.scheduleFriday;
 	let scheduleRally = Timings.scheduleRally;
-	/*FINALS SCHEDULE*/
-	let scheduleMondayFinal = Timings.scheduleMondayFinal;
-	let scheduleTuesdayFinal = Timings.scheduleTuesdayFinal;
-	let scheduleWednesdayFinal = Timings.scheduleWednesdayFinal;
-	let scheduleThursdayFinal = Timings.scheduleThursdayFinal;
-	/*END FINALS SCHEDULE*/
+	
 	var sections : [[(String, String, String)]] = [];
 	override func viewDidLoad() {
 		sections = [scheduleMondayTuesdayThursday,
 		            scheduleWednesday,
 		            scheduleFriday,
-					scheduleRally/*FINALS SCHEDULE*/,
-					scheduleMondayFinal,
-					scheduleTuesdayFinal,
-					scheduleWednesdayFinal,
-					scheduleThursdayFinal/*END FINALS SCHEDULE*/
-		]
+					scheduleRally]
 		super.viewDidLoad();
 	}
 	override func didReceiveMemoryWarning() {
@@ -55,14 +45,6 @@ class AllSchedulesTableTableViewController: UITableViewController {
 			return "Friday";
 		} else if (section == 3) {
 			return "Rally";
-		}/*FINALS SCHEDULE*/ else if (section == 4) {
-			return "Monday Final";
-		} else if (section == 5) {
-			return "Tuesday Final";
-		} else if (section == 6) {
-			return "Wednesday Final";
-		} else if (section == 7) {
-			return "Thursday Final";
 		}
 		return "Section \(section)"
 	}
@@ -70,8 +52,8 @@ class AllSchedulesTableTableViewController: UITableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath)
 		let schedule = sections[indexPath.section];
 		let period = schedule[indexPath.row];
-		let startTime = period.0;
-		let endTime = period.1;
+		let startTime = DisplayTime(period.0).resolved;
+		let endTime = DisplayTime(period.1).resolved;
 		let label = period.2;
 		let labelText = "\(startTime) – \(endTime)   \(label)";
 		cell.textLabel!.text = labelText;

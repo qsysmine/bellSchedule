@@ -12,19 +12,12 @@ public class CurrentTimings {
     public init() {
         let dayOfTheWeek = Today().weekday;
 		let dateString = Today().dateString;
-		//FINALS SCHEDULE
-		if(dateString == "19 DEC 2016") {
-			currentTimings = Timings.scheduleMondayFinal;
-		} else if (dateString == "20 DEC 2016") {
-			currentTimings = Timings.scheduleTuesdayFinal;
-		} else if (dateString == "21 DEC 2016") {
-			currentTimings = Timings.scheduleWednesdayFinal;
-		} else if(dateString == "22 DEC 2016") {
-			currentTimings = Timings.scheduleThursdayFinal;
-		} else if(dateString == "23 DEC 2016") {
-			currentTimings = [];
+		/* 2017 RALLY [*/
+		if(dateString == "17 FEB 2017" || dateString == "14 APR 2017") {
+			currentTimings = Timings.scheduleRally;
 		}
-        else /*END FINALS SCHEDULE*/if(dayOfTheWeek == "MON" || dayOfTheWeek == "TUE" || dayOfTheWeek == "THU") {
+		/*] END 2017 RALLY*/
+		else if(dayOfTheWeek == "MON" || dayOfTheWeek == "TUE" || dayOfTheWeek == "THU") {
             currentTimings = Timings.scheduleMondayTuesdayThursday;
         } else if(dayOfTheWeek == "WED") {
             currentTimings = Timings.scheduleWednesday;

@@ -63,8 +63,8 @@ class ScheduleTableViewController: UITableViewController {
 		}
 		let currentPeriod = CurrentPeriod().periodOffset;
 		let period = data[indexPath.row];
-		let startTime = period.0;
-		let endTime = period.1;
+		let startTime = DisplayTime(period.0).resolved;
+		let endTime = DisplayTime(period.1).resolved;
 		let label = period.2;
 		if(indexPath.row == currentPeriod) {
 			cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 16)

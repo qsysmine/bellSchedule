@@ -24,11 +24,11 @@ class MainScreenController: UIViewController {
         if(currentPeriod.isCurrentPeriod) {
             let periodOffset = currentPeriod.periodOffset;
             currentClassText.text! = currentTimings[periodOffset].2;
-            startText.text! = currentTimings[periodOffset].0;
-            endText.text! = currentTimings[periodOffset].1;
+            startText.text! = DisplayTime(currentTimings[periodOffset].0).resolved;
+            endText.text! = DisplayTime(currentTimings[periodOffset].1).resolved;
             if(currentTimings.count > periodOffset + 1) {
                 let nextPeriod = currentTimings[periodOffset + 1];
-                nextClassText.text! = "NEXT: \(nextPeriod.2) (\(nextPeriod.0) – \(nextPeriod.1))";
+                nextClassText.text! = "NEXT: \(nextPeriod.2) (\(DisplayTime(nextPeriod.0).resolved) – \(DisplayTime(nextPeriod.1).resolved))";
             } else {
                 nextClassText.text! = "";
             }
