@@ -7,32 +7,69 @@
 //
 
 import Foundation
+import UIKit
 
-public enum SettingType: String {
+public enum TimeSettingType: String {
 	case twelve = "twelve"
 	case twentyfour = "twentyfour"
 }
 
-public enum SettingLabel: String {
-	case timeType = "settingUserTimeType"
-	case colour = "settingUserColour"
+public enum ColourSettingType: String {
+	case blue = "Blue"
+	case red = "Red"
 }
 
+public enum SettingLabel: String {
+	case timeType = "settingUserTimeType"
+	case colourType = "settingUserColour"
+}
+
+
 public class Settings {
-	public static func getTimeType() -> SettingType {
+	public static func getTimeType() -> TimeSettingType {
 		let userDefaults = UserDefaults.standard;
 		if(userDefaults.object(forKey: SettingLabel.timeType.rawValue) == nil) {
-			userDefaults.setValue(SettingType.twelve.rawValue, forKey: SettingLabel.timeType.rawValue);
+			userDefaults.setValue(TimeSettingType.twelve.rawValue, forKey: SettingLabel.timeType.rawValue);
 		}
 		let setting = userDefaults.string(forKey: SettingLabel.timeType.rawValue);
-		if(setting == SettingType.twelve.rawValue) {
-			return SettingType.twelve;
+		if(setting == TimeSettingType.twelve.rawValue) {
+			return TimeSettingType.twelve;
 		} else {
-			return SettingType.twentyfour;
+			return TimeSettingType.twentyfour;
 		}
 	};
-	public static func setTimeType(type: SettingType) {
+	
+	public static func setTimeType(type: TimeSettingType) {
 		let userDefaults = UserDefaults.standard;
 		userDefaults.setValue(type.rawValue, forKey: SettingLabel.timeType.rawValue);
 	};
+	
+	public static func getColourType() -> ColourSettingType {
+		let userDefaults = UserDefaults.standard;
+		if(userDefaults.object(forKey: SettingLabel.timeType.rawValue) == nil) {
+			userDefaults.setValue(TimeSettingType.twelve.rawValue, forKey: SettingLabel.timeType.rawValue);
+		}
+		let setting = userDefaults.string(forKey: SettingLabel.colourType.rawValue);
+		if(setting == ColourSettingType.red.rawValue) {
+			return ColourSettingType.red;
+		} else {
+			return ColourSettingType.blue;
+		}
+	};
+	
+	public static func setColourType(type: ColourSettingType) {
+		let userDefaults = UserDefaults.standard;
+		userDefaults.setValue(type.rawValue, forKey: SettingLabel.colourType.rawValue);
+	};
+	
+	public static func getColour() -> UIColor {
+		let colourType = self.getColourType();
+		if(colourType == .blue) {
+			return UIColor(displayP3Red:0.09, green:0.26, blue:0.36, alpha:1.0);
+		} else if(colourType == .red) {
+			return UIColor(displayP3Red: 0.43, green: 0.06, blue: 0.15, alpha: 1.0);
+		} else {
+			return UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 100.0);
+		}
+	}
 }

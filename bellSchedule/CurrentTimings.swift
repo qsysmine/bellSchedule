@@ -17,6 +17,11 @@ public class CurrentTimings {
 			currentTimings = Timings.scheduleRally;
 		}
 		/*] END 2017 RALLY*/
+		/* 2017 DAYS OFF [*/
+		else if (dateString == "20 FEB 2017" || dateString == "17 MAR 2017" || dateString == "3 APR 2017" || dateString == "4 APR 2017" || dateString == "5 APR 2017" || dateString == "6 APR 2017" || dateString == "7 APR 2017" || dateString == "29 MAY 2017") {
+			currentTimings = [];
+		}
+		/*] END 2017 DAYS OFF*/
 		else if(dayOfTheWeek == "MON" || dayOfTheWeek == "TUE" || dayOfTheWeek == "THU") {
             currentTimings = Timings.scheduleMondayTuesdayThursday;
         } else if(dayOfTheWeek == "WED") {

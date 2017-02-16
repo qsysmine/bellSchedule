@@ -49,12 +49,12 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if(isWeekend) {return 1;}
+		if(isWeekend || data.count == 0) {return 1;}
 		return data.count;
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath);
-		if(isWeekend/*FINALS SCHEDULE*/ || dateString == "23 DEC 2016"){
+		if(isWeekend || data.count == 0){
 			if(indexPath.row == 0) {
 				cell.textLabel!.text = "No class today";
 				cell.textLabel!.textAlignment = .center;

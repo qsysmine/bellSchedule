@@ -112,6 +112,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		881342FB1E50E36E00B0FBA8 /* bellSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bellSchedule.entitlements; sourceTree = "<group>"; };
+		881342FC1E50E3AB00B0FBA8 /* BellScheduleWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BellScheduleWidget.entitlements; sourceTree = "<group>"; };
 		881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylisedNavigationController.swift; sourceTree = "<group>"; };
 		881FF0001D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSchedulesTableTableViewController.swift; sourceTree = "<group>"; };
 		881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BellScheduleDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +254,7 @@
 		883285661E2926EB00CA9839 /* BellScheduleWidget */ = {
 			isa = PBXGroup;
 			children = (
+				881342FC1E50E3AB00B0FBA8 /* BellScheduleWidget.entitlements */,
 				883285671E2926EB00CA9839 /* TodayViewController.swift */,
 				883285691E2926EB00CA9839 /* MainInterface.storyboard */,
 				8832856C1E2926EB00CA9839 /* Info.plist */,
@@ -290,6 +293,7 @@
 		88BC439D1D5FCF5400FFBDEF /* bellSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				881342FB1E50E36E00B0FBA8 /* bellSchedule.entitlements */,
 				88BC43D21D5FD1CF00FFBDEF /* Storyboard */,
 				88BC43D11D5FD1CB00FFBDEF /* Code */,
 				88BC43CE1D5FD0BA00FFBDEF /* Assets */,
@@ -506,12 +510,22 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Z44L282QM9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					88BC439A1D5FCF5300FFBDEF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Z44L282QM9;
 						DevelopmentTeamName = "Qsysmine S. (Personal Team)";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					88BC43AE1D5FCF5400FFBDEF = {
 						CreatedOnToolsVersion = 8.0;
@@ -802,6 +816,7 @@
 		883285711E2926EB00CA9839 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BellScheduleWidget/BellScheduleWidget.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = BellScheduleWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -816,6 +831,7 @@
 		883285721E2926EB00CA9839 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BellScheduleWidget/BellScheduleWidget.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = BellScheduleWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -923,6 +939,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bellSchedule/bellSchedule.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = bellSchedule/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -938,6 +955,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bellSchedule/bellSchedule.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = bellSchedule/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

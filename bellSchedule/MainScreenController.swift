@@ -41,11 +41,15 @@ class MainScreenController: UIViewController {
     }
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
+		UIView.animate(withDuration: 0.5, animations: {
+			self.view.backgroundColor = Settings.getColour()
+		});
 		populateFields()
 	}
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.view.backgroundColor = Settings.getColour()
 		let date = NSDate().addingTimeInterval(5)
 		let timer = Timer(fireAt: date as Date, interval: 0, target: self, selector: #selector(populateFields), userInfo: nil, repeats: true)
 		RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)

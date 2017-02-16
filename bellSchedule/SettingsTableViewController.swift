@@ -10,27 +10,31 @@ import UIKit
 import MessageUI
 import BellScheduleDataKit
 
-class SettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
-    
-	@IBOutlet weak var militaryTimeSwitch: UISwitch!
+class SettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 	
-    override func viewDidLoad() {
+	
+	@IBOutlet weak var militaryTimeSwitch: UISwitch!;
+	@IBOutlet weak var colourPickerView: UIPickerView!;
+	var colourData = ["Blue", "Red"];
+	
+	override func viewDidLoad() {
 		super.viewDidLoad();
 		self.tableView.allowsSelection = false;
 		let timeType = Settings.getTimeType();
 		militaryTimeSwitch.isOn = timeType == .twentyfour;
-    }
+		colourPickerView.delegate = self;
+		colourPickerView.dataSource = self;
+	}
 	
-	func rateApp(appId: String, completion: @escaping ((_ success: Bool)->())) {
-		guard let url = URL(string : "itms-apps://itunes.apple.com/app/" + appId) else {
-			completion(false)
-			return
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated);
+		let colourType = Settings.getColourType();
+		print(colourType);
+		if(colourType == .blue) {
+			colourPickerView.selectRow(0, inComponent: 0, animated: true);
+		} else {
+			colourPickerView.selectRow(1, inComponent: 0, animated: true);
 		}
-		guard #available(iOS 10, *) else {
-			completion(UIApplication.shared.openURL(url))
-			return
-		}
-		UIApplication.shared.open(url, options: [:], completionHandler: completion)
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -40,16 +44,11 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 	@IBAction func militaryTimeSwitched(_ sender: UISwitch) {
 		switch sender.isOn {
 		case true:
-			Settings.setTimeType(type: SettingType.twentyfour)
-			break
+			Settings.setTimeType(type: TimeSettingType.twentyfour);
+			break;
 		case false:
-			Settings.setTimeType(type: SettingType.twelve)
-			break
-		}
-	}
-	
-	@IBAction func rateClick(_ sender: UIButton) {
-		rateApp(appId: "1158589523") { success in
+			Settings.setTimeType(type: TimeSettingType.twelve);
+			break;
 		}
 	}
 	
@@ -59,12 +58,31 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		mailVC.setToRecipients(["clients0@qsysmine.tk"])
 		mailVC.setSubject("Bell Schedule Feedback")
 		mailVC.setMessageBody("I have some feedback for the DHS Bell Schedule app: ", isHTML: false)
-		if(mailVC != nil) {
-			present(mailVC, animated: true, completion: nil)
-		}
-		
+		present(mailVC, animated: true, completion: nil)
 	}
-	// MARK: MFMailComposeViewControllerDelegate Method
+	
+	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return colourData.count;
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return colourData[row];
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		let colour = colourData[row];
+		var colourSettingType: ColourSettingType = .blue;
+		if(colour == "Red") {
+			colourSettingType = .red;
+		}
+		Settings.setColourType(type: colourSettingType);
+		(self.navigationController as! StylisedNavigationController).updateTint()
+	}
+	
+	public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+		return 1;
+	}
+	
 	func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
 		controller.dismiss(animated: true, completion: nil)
 	}

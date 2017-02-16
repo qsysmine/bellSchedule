@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fWv-pW-tOY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fWv-pW-tOY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -238,7 +238,7 @@
                             <tableViewSection headerTitle="Time" id="P4j-k4-1Gi">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeSettingCell" id="ZHq-3B-rQf">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZHq-3B-rQf" id="5aF-WQ-yCY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -272,10 +272,10 @@
                             <tableViewSection headerTitle="Feedback" id="WMc-mg-pI4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rateSettingCell" id="ebz-zH-1FP">
-                                        <rect key="frame" x="0.0" y="157" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ebz-zH-1FP" id="fPd-cM-SVt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-Ud-oe4">
@@ -290,6 +290,29 @@
                                                 <constraint firstItem="wsI-Ud-oe4" firstAttribute="leading" secondItem="fPd-cM-SVt" secondAttribute="leadingMargin" id="HNN-TE-xKf"/>
                                                 <constraint firstItem="wsI-Ud-oe4" firstAttribute="centerY" secondItem="fPd-cM-SVt" secondAttribute="centerY" id="Slg-BB-uvL"/>
                                                 <constraint firstItem="wsI-Ud-oe4" firstAttribute="trailing" secondItem="fPd-cM-SVt" secondAttribute="trailingMargin" id="qRt-aq-Vgh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Feedback" id="hOq-26-Im3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="colorSettingCell" rowHeight="100" id="ANu-oK-MI5">
+                                        <rect key="frame" x="0.0" y="256" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ANu-oK-MI5" id="UfP-aY-GCg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1Q-pF-Hss">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="k1Q-pF-Hss" secondAttribute="trailing" id="5aN-Vp-6wd"/>
+                                                <constraint firstItem="k1Q-pF-Hss" firstAttribute="centerY" secondItem="UfP-aY-GCg" secondAttribute="centerY" id="OGf-gY-vXB"/>
+                                                <constraint firstItem="k1Q-pF-Hss" firstAttribute="leading" secondItem="UfP-aY-GCg" secondAttribute="leading" id="eNi-YW-pkU"/>
+                                                <constraint firstItem="k1Q-pF-Hss" firstAttribute="top" secondItem="UfP-aY-GCg" secondAttribute="top" id="ywR-IG-g1D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -311,6 +334,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="colourPickerView" destination="k1Q-pF-Hss" id="pX2-O3-VMy"/>
                         <outlet property="militaryTimeSwitch" destination="INb-PH-C3s" id="7Ij-FE-e7n"/>
                     </connections>
                 </tableViewController>

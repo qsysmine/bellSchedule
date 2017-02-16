@@ -23,6 +23,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		super.viewDidLoad()
 		determineWeekend()
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+		self.view.backgroundColor = Settings.getColour();
+    }
 	func determineWeekend() {
 		let weekday = Today().weekday;
 		if weekday == "SAT" || weekday == "SUN" {
@@ -42,6 +47,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
 		determineWeekend()
 		determineHasPeriod()
+		self.view.backgroundColor = Settings.getColour();
 		if isWeekend || !hasPeriod {
 			startTimeLabel!.text = "";
 			classLabel!.text = "";
