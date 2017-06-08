@@ -8,28 +8,38 @@
 
 import Foundation
 public class CurrentTimings {
-    public var currentTimings:[(String, String, String)];
-    public init() {
-        let dayOfTheWeek = Today().weekday;
+	public var currentTimings:[(String, String, String)];
+	public init() {
+		let dayOfTheWeek = Today().weekday;
 		let dateString = Today().dateString;
-		/* 2017 RALLY [*/
-		if(dateString == "17 FEB 2017" || dateString == "14 APR 2017") {
+		/* RALLY DAYS 2017 [*/
+		if (dateString == "19 MAY 2017") {
 			currentTimings = Timings.scheduleRally;
-		}
-		/*] END 2017 RALLY*/
-		/* 2017 DAYS OFF [*/
-		else if (dateString == "20 FEB 2017" || dateString == "17 MAR 2017" || dateString == "3 APR 2017" || dateString == "4 APR 2017" || dateString == "5 APR 2017" || dateString == "6 APR 2017" || dateString == "7 APR 2017" || dateString == "29 MAY 2017") {
+		} else
+			/*] END RALLY DAYS 2017*/
+			/* 2017 DAYS OFF [*/
+		if (dateString == "29 MAY 2017") {
 			currentTimings = [];
 		}
-		/*] END 2017 DAYS OFF*/
+			/*] END 2017 DAYS OFF*/
+			/* SPRING FINALS 2017 [*/
+		else if(dateString == "30 MAY 2017") {
+			currentTimings = Timings.schedule30May;
+		} else if(dateString == "31 MAY 2017") {
+			currentTimings = Timings.schedule31May;
+		} else if(dateString == "01 JUN 2017") {
+			currentTimings = Timings.schedule1June;
+		}
+			/* ] END SPRING FINALS 2017*/
 		else if(dayOfTheWeek == "MON" || dayOfTheWeek == "TUE" || dayOfTheWeek == "THU") {
-            currentTimings = Timings.scheduleMondayTuesdayThursday;
-        } else if(dayOfTheWeek == "WED") {
-            currentTimings = Timings.scheduleWednesday;
-        } else if(dayOfTheWeek == "FRI") {
-            currentTimings = Timings.scheduleFriday;
-        } else {
-            currentTimings = [];
-        }
-    }
+			currentTimings = Timings.scheduleMondayTuesdayThursday;
+		} else if(dayOfTheWeek == "WED") {
+			currentTimings = Timings.scheduleWednesday;
+		} else if(dayOfTheWeek == "FRI") {
+			currentTimings = Timings.scheduleFriday;
+		} else {
+			currentTimings = [];
+		}
+		
+	}
 }

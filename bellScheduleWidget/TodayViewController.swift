@@ -47,7 +47,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
 		determineWeekend()
 		determineHasPeriod()
-		self.view.backgroundColor = Settings.getColour();
 		if isWeekend || !hasPeriod {
 			startTimeLabel!.text = "";
 			classLabel!.text = "";
@@ -74,6 +73,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 				nextClassLabel!.text = ""
 			}
 		}
+		self.view.backgroundColor = Settings.getColour();
+		print(Settings.getColour());
 		completionHandler(NCUpdateResult.newData)
 	}
 	@IBAction func InfoButtonPressed(_ sender: AnyObject) {

@@ -67,15 +67,33 @@ class ScheduleTableViewController: UITableViewController {
 		let endTime = DisplayTime(period.1).resolved;
 		let label = period.2;
 		if(indexPath.row == currentPeriod) {
-			cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 16)
+			cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 14)
+			if(cell.textLabel!.text?.contains("Passing Period"))! {
+				cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 10)
+			}
 		} else {
 			cell.textLabel!.font = UIFont.systemFont(ofSize: 14);
+			if(cell.textLabel!.text?.contains("Passing Period"))! {
+				cell.textLabel!.font = UIFont.systemFont(ofSize: 10)
+			}
 		}
-		cell.textLabel!.text! = "\(startTime) – \(endTime)   \(label)";
-		// Configure the cell...
-		
+		cell.textLabel!.text! = "\(startTime) – \(endTime)   \(label)";		
 		return cell
 	}
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if(!isWeekend) {
+			let period = data[indexPath.row];
+			let text = period.2;
+			if(text.contains("Passing Period")) {
+				return 25;
+			} else {
+				return 44;
+			}
+		}
+		return 44;
+	}
+	
 	@IBAction func unwindToSchedule (sender: UIStoryboardSegue){
 		
 	}

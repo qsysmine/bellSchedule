@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		881FEFFF1D60D0F3003AC1AC /* StylisedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */; };
 		881FF0011D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF0001D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift */; };
-		881FF0161D60F627003AC1AC /* BellScheduleDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */; };
-		881FF01D1D60F627003AC1AC /* BellScheduleDataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF01C1D60F627003AC1AC /* BellScheduleDataKitTests.swift */; };
 		881FF01F1D60F627003AC1AC /* BellScheduleDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 881FF00F1D60F627003AC1AC /* BellScheduleDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		881FF0221D60F627003AC1AC /* BellScheduleDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */; };
 		881FF0231D60F627003AC1AC /* BellScheduleDataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -28,6 +26,7 @@
 		8832856B1E2926EB00CA9839 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883285691E2926EB00CA9839 /* MainInterface.storyboard */; };
 		8832856F1E2926EB00CA9839 /* BellScheduleWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 883285641E2926EB00CA9839 /* BellScheduleWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		883285731E29272500CA9839 /* BellScheduleDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */; };
+		8840CC381E71BD9500B66FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A51D5FCF5400FFBDEF /* Assets.xcassets */; };
 		888AD14F1E2A605100D28DFD /* DisplayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888AD14E1E2A605100D28DFD /* DisplayTime.swift */; };
 		888AD1511E2ABC9400D28DFD /* CurrentSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */; };
 		88A9CC961E27C4810088AE2A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A9CC951E27C4810088AE2A /* Settings.swift */; };
@@ -37,25 +36,9 @@
 		88BC43A41D5FCF5400FFBDEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A21D5FCF5400FFBDEF /* Main.storyboard */; };
 		88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A51D5FCF5400FFBDEF /* Assets.xcassets */; };
 		88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A71D5FCF5400FFBDEF /* LaunchScreen.storyboard */; };
-		88BC43B41D5FCF5400FFBDEF /* bellScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC43B31D5FCF5400FFBDEF /* bellScheduleTests.swift */; };
-		88BC43BF1D5FCF5400FFBDEF /* bellScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC43BE1D5FCF5400FFBDEF /* bellScheduleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		881FF0171D60F627003AC1AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88BC43931D5FCF5300FFBDEF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 881FF00C1D60F627003AC1AC;
-			remoteInfo = BellScheduleDataKit;
-		};
-		881FF0191D60F627003AC1AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88BC43931D5FCF5300FFBDEF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88BC439A1D5FCF5300FFBDEF;
-			remoteInfo = bellSchedule;
-		};
 		881FF0201D60F627003AC1AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88BC43931D5FCF5300FFBDEF /* Project object */;
@@ -69,20 +52,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 883285631E2926EB00CA9839;
 			remoteInfo = BellScheduleWidget;
-		};
-		88BC43B01D5FCF5400FFBDEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88BC43931D5FCF5300FFBDEF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88BC439A1D5FCF5300FFBDEF;
-			remoteInfo = bellSchedule;
-		};
-		88BC43BB1D5FCF5400FFBDEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88BC43931D5FCF5300FFBDEF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88BC439A1D5FCF5300FFBDEF;
-			remoteInfo = bellSchedule;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -119,9 +88,6 @@
 		881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BellScheduleDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		881FF00F1D60F627003AC1AC /* BellScheduleDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BellScheduleDataKit.h; sourceTree = "<group>"; };
 		881FF0101D60F627003AC1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		881FF0151D60F627003AC1AC /* BellScheduleDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BellScheduleDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		881FF01C1D60F627003AC1AC /* BellScheduleDataKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellScheduleDataKitTests.swift; sourceTree = "<group>"; };
-		881FF01E1D60F627003AC1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		883285461E29205300CA9839 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		883285481E29252D00CA9839 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8832854F1E29254C00CA9839 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -140,12 +106,6 @@
 		88BC43A51D5FCF5400FFBDEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88BC43A81D5FCF5400FFBDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88BC43AA1D5FCF5400FFBDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88BC43AF1D5FCF5400FFBDEF /* bellScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bellScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88BC43B31D5FCF5400FFBDEF /* bellScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bellScheduleTests.swift; sourceTree = "<group>"; };
-		88BC43B51D5FCF5400FFBDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88BC43BA1D5FCF5400FFBDEF /* bellScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bellScheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88BC43BE1D5FCF5400FFBDEF /* bellScheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bellScheduleUITests.swift; sourceTree = "<group>"; };
-		88BC43C01D5FCF5400FFBDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88BC43D71D5FD2BB00FFBDEF /* Timings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timings.swift; path = ../bellSchedule/Timings.swift; sourceTree = "<group>"; };
 		88BC43D91D5FD73A00FFBDEF /* Period.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Period.swift; path = ../bellSchedule/Period.swift; sourceTree = "<group>"; };
 		88BC43DB1D5FD7D300FFBDEF /* Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Today.swift; path = ../bellSchedule/Today.swift; sourceTree = "<group>"; };
@@ -153,6 +113,7 @@
 		88BC43E31D5FE0E300FFBDEF /* CurrentPeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentPeriod.swift; path = ../bellSchedule/CurrentPeriod.swift; sourceTree = "<group>"; };
 		88BC43E51D5FE12F00FFBDEF /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = ../bellSchedule/DateExtension.swift; sourceTree = "<group>"; };
 		88BC43E71D5FE4EA00FFBDEF /* CurrentTimings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentTimings.swift; path = ../bellSchedule/CurrentTimings.swift; sourceTree = "<group>"; };
+		88F5EA5F1ECF463C009CBCEB /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,14 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		881FF0121D60F627003AC1AC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				881FF0161D60F627003AC1AC /* BellScheduleDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,20 +142,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88BC43AC1D5FCF5400FFBDEF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88BC43B71D5FCF5400FFBDEF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -214,15 +153,6 @@
 				881FF0101D60F627003AC1AC /* Info.plist */,
 			);
 			path = BellScheduleDataKit;
-			sourceTree = "<group>";
-		};
-		881FF01B1D60F627003AC1AC /* BellScheduleDataKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				881FF01C1D60F627003AC1AC /* BellScheduleDataKitTests.swift */,
-				881FF01E1D60F627003AC1AC /* Info.plist */,
-			);
-			path = BellScheduleDataKitTests;
 			sourceTree = "<group>";
 		};
 		881FF02B1D60F67B003AC1AC /* BellScheduleData */ = {
@@ -247,6 +177,7 @@
 			children = (
 				883285481E29252D00CA9839 /* CoreGraphics.framework */,
 				8832854F1E29254C00CA9839 /* NotificationCenter.framework */,
+				88F5EA5F1ECF463C009CBCEB /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,10 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				88BC439D1D5FCF5400FFBDEF /* bellSchedule */,
-				88BC43B21D5FCF5400FFBDEF /* bellScheduleTests */,
-				88BC43BD1D5FCF5400FFBDEF /* bellScheduleUITests */,
 				881FF00E1D60F627003AC1AC /* BellScheduleDataKit */,
-				881FF01B1D60F627003AC1AC /* BellScheduleDataKitTests */,
 				883285661E2926EB00CA9839 /* BellScheduleWidget */,
 				881FF0391D60F8EB003AC1AC /* Frameworks */,
 				88BC439C1D5FCF5400FFBDEF /* Products */,
@@ -281,10 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				88BC439B1D5FCF5400FFBDEF /* bellSchedule.app */,
-				88BC43AF1D5FCF5400FFBDEF /* bellScheduleTests.xctest */,
-				88BC43BA1D5FCF5400FFBDEF /* bellScheduleUITests.xctest */,
 				881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */,
-				881FF0151D60F627003AC1AC /* BellScheduleDataKitTests.xctest */,
 				883285641E2926EB00CA9839 /* BellScheduleWidget.appex */,
 			);
 			name = Products;
@@ -299,24 +224,6 @@
 				88BC43CE1D5FD0BA00FFBDEF /* Assets */,
 			);
 			path = bellSchedule;
-			sourceTree = "<group>";
-		};
-		88BC43B21D5FCF5400FFBDEF /* bellScheduleTests */ = {
-			isa = PBXGroup;
-			children = (
-				88BC43B31D5FCF5400FFBDEF /* bellScheduleTests.swift */,
-				88BC43B51D5FCF5400FFBDEF /* Info.plist */,
-			);
-			path = bellScheduleTests;
-			sourceTree = "<group>";
-		};
-		88BC43BD1D5FCF5400FFBDEF /* bellScheduleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				88BC43BE1D5FCF5400FFBDEF /* bellScheduleUITests.swift */,
-				88BC43C01D5FCF5400FFBDEF /* Info.plist */,
-			);
-			path = bellScheduleUITests;
 			sourceTree = "<group>";
 		};
 		88BC43CE1D5FD0BA00FFBDEF /* Assets */ = {
@@ -390,25 +297,6 @@
 			productReference = 881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		881FF0141D60F627003AC1AC /* BellScheduleDataKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 881FF0281D60F627003AC1AC /* Build configuration list for PBXNativeTarget "BellScheduleDataKitTests" */;
-			buildPhases = (
-				881FF0111D60F627003AC1AC /* Sources */,
-				881FF0121D60F627003AC1AC /* Frameworks */,
-				881FF0131D60F627003AC1AC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				881FF0181D60F627003AC1AC /* PBXTargetDependency */,
-				881FF01A1D60F627003AC1AC /* PBXTargetDependency */,
-			);
-			name = BellScheduleDataKitTests;
-			productName = BellScheduleDataKitTests;
-			productReference = 881FF0151D60F627003AC1AC /* BellScheduleDataKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		883285631E2926EB00CA9839 /* BellScheduleWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 883285701E2926EB00CA9839 /* Build configuration list for PBXNativeTarget "BellScheduleWidget" */;
@@ -447,49 +335,13 @@
 			productReference = 88BC439B1D5FCF5400FFBDEF /* bellSchedule.app */;
 			productType = "com.apple.product-type.application";
 		};
-		88BC43AE1D5FCF5400FFBDEF /* bellScheduleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 88BC43C61D5FCF5400FFBDEF /* Build configuration list for PBXNativeTarget "bellScheduleTests" */;
-			buildPhases = (
-				88BC43AB1D5FCF5400FFBDEF /* Sources */,
-				88BC43AC1D5FCF5400FFBDEF /* Frameworks */,
-				88BC43AD1D5FCF5400FFBDEF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				88BC43B11D5FCF5400FFBDEF /* PBXTargetDependency */,
-			);
-			name = bellScheduleTests;
-			productName = bellScheduleTests;
-			productReference = 88BC43AF1D5FCF5400FFBDEF /* bellScheduleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		88BC43B91D5FCF5400FFBDEF /* bellScheduleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 88BC43C91D5FCF5400FFBDEF /* Build configuration list for PBXNativeTarget "bellScheduleUITests" */;
-			buildPhases = (
-				88BC43B61D5FCF5400FFBDEF /* Sources */,
-				88BC43B71D5FCF5400FFBDEF /* Frameworks */,
-				88BC43B81D5FCF5400FFBDEF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				88BC43BC1D5FCF5400FFBDEF /* PBXTargetDependency */,
-			);
-			name = bellScheduleUITests;
-			productName = bellScheduleUITests;
-			productReference = 88BC43BA1D5FCF5400FFBDEF /* bellScheduleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		88BC43931D5FCF5300FFBDEF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Stassinopoulos;
 				TargetAttributes = {
@@ -498,13 +350,6 @@
 						DevelopmentTeam = Z44L282QM9;
 						DevelopmentTeamName = "Qsysmine S. (Personal Team)";
 						ProvisioningStyle = Automatic;
-					};
-					881FF0141D60F627003AC1AC = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = NUZ6NR455M;
-						DevelopmentTeamName = "Qsysmine S. (Personal Team)";
-						ProvisioningStyle = Automatic;
-						TestTargetID = 88BC439A1D5FCF5300FFBDEF;
 					};
 					883285631E2926EB00CA9839 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -525,21 +370,13 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
 						};
-					};
-					88BC43AE1D5FCF5400FFBDEF = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = NUZ6NR455M;
-						DevelopmentTeamName = "Qsysmine S. (Personal Team)";
-						ProvisioningStyle = Automatic;
-						TestTargetID = 88BC439A1D5FCF5300FFBDEF;
-					};
-					88BC43B91D5FCF5400FFBDEF = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = NUZ6NR455M;
-						DevelopmentTeamName = "Qsysmine S. (Personal Team)";
-						ProvisioningStyle = Automatic;
-						TestTargetID = 88BC439A1D5FCF5300FFBDEF;
 					};
 				};
 			};
@@ -557,10 +394,7 @@
 			projectRoot = "";
 			targets = (
 				88BC439A1D5FCF5300FFBDEF /* bellSchedule */,
-				88BC43AE1D5FCF5400FFBDEF /* bellScheduleTests */,
-				88BC43B91D5FCF5400FFBDEF /* bellScheduleUITests */,
 				881FF00C1D60F627003AC1AC /* BellScheduleDataKit */,
-				881FF0141D60F627003AC1AC /* BellScheduleDataKitTests */,
 				883285631E2926EB00CA9839 /* BellScheduleWidget */,
 			);
 		};
@@ -574,17 +408,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		881FF0131D60F627003AC1AC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		883285621E2926EB00CA9839 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8840CC381E71BD9500B66FFD /* Assets.xcassets in Resources */,
 				8832856B1E2926EB00CA9839 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,20 +424,6 @@
 				88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */,
 				88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */,
 				88BC43A41D5FCF5400FFBDEF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88BC43AD1D5FCF5400FFBDEF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88BC43B81D5FCF5400FFBDEF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,14 +444,6 @@
 				888AD1511E2ABC9400D28DFD /* CurrentSchedule.swift in Sources */,
 				881FF0311D60F6A8003AC1AC /* CurrentPeriod.swift in Sources */,
 				881FF02F1D60F6A8003AC1AC /* Today.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		881FF0111D60F627003AC1AC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				881FF01D1D60F627003AC1AC /* BellScheduleDataKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,35 +468,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88BC43AB1D5FCF5400FFBDEF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88BC43B41D5FCF5400FFBDEF /* bellScheduleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88BC43B61D5FCF5400FFBDEF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88BC43BF1D5FCF5400FFBDEF /* bellScheduleUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		881FF0181D60F627003AC1AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 881FF00C1D60F627003AC1AC /* BellScheduleDataKit */;
-			targetProxy = 881FF0171D60F627003AC1AC /* PBXContainerItemProxy */;
-		};
-		881FF01A1D60F627003AC1AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 88BC439A1D5FCF5300FFBDEF /* bellSchedule */;
-			targetProxy = 881FF0191D60F627003AC1AC /* PBXContainerItemProxy */;
-		};
 		881FF0211D60F627003AC1AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 881FF00C1D60F627003AC1AC /* BellScheduleDataKit */;
@@ -700,16 +480,6 @@
 			isa = PBXTargetDependency;
 			target = 883285631E2926EB00CA9839 /* BellScheduleWidget */;
 			targetProxy = 8832856D1E2926EB00CA9839 /* PBXContainerItemProxy */;
-		};
-		88BC43B11D5FCF5400FFBDEF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 88BC439A1D5FCF5300FFBDEF /* bellSchedule */;
-			targetProxy = 88BC43B01D5FCF5400FFBDEF /* PBXContainerItemProxy */;
-		};
-		88BC43BC1D5FCF5400FFBDEF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 88BC439A1D5FCF5300FFBDEF /* bellSchedule */;
-			targetProxy = 88BC43BB1D5FCF5400FFBDEF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -789,37 +559,13 @@
 			};
 			name = Release;
 		};
-		881FF0291D60F627003AC1AC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = BellScheduleDataKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.BellScheduleDataKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bellSchedule.app/bellSchedule";
-			};
-			name = Debug;
-		};
-		881FF02A1D60F627003AC1AC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = BellScheduleDataKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.BellScheduleDataKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bellSchedule.app/bellSchedule";
-			};
-			name = Release;
-		};
 		883285711E2926EB00CA9839 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BellScheduleWidget/BellScheduleWidget.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = BellScheduleWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule.BellScheduleWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -834,7 +580,7 @@
 				CODE_SIGN_ENTITLEMENTS = BellScheduleWidget/BellScheduleWidget.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = BellScheduleWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule.BellScheduleWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -942,6 +688,7 @@
 				CODE_SIGN_ENTITLEMENTS = bellSchedule/bellSchedule.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = bellSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -958,61 +705,12 @@
 				CODE_SIGN_ENTITLEMENTS = bellSchedule/bellSchedule.entitlements;
 				DEVELOPMENT_TEAM = Z44L282QM9;
 				INFOPLIST_FILE = bellSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		88BC43C71D5FCF5400FFBDEF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = bellScheduleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.bellScheduleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bellSchedule.app/bellSchedule";
-			};
-			name = Debug;
-		};
-		88BC43C81D5FCF5400FFBDEF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = bellScheduleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.bellScheduleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bellSchedule.app/bellSchedule";
-			};
-			name = Release;
-		};
-		88BC43CA1D5FCF5400FFBDEF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = bellScheduleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.bellScheduleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = bellSchedule;
-			};
-			name = Debug;
-		};
-		88BC43CB1D5FCF5400FFBDEF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = bellScheduleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.bellScheduleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = bellSchedule;
 			};
 			name = Release;
 		};
@@ -1024,15 +722,6 @@
 			buildConfigurations = (
 				881FF0251D60F627003AC1AC /* Debug */,
 				881FF0261D60F627003AC1AC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		881FF0281D60F627003AC1AC /* Build configuration list for PBXNativeTarget "BellScheduleDataKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				881FF0291D60F627003AC1AC /* Debug */,
-				881FF02A1D60F627003AC1AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1060,24 +749,6 @@
 			buildConfigurations = (
 				88BC43C41D5FCF5400FFBDEF /* Debug */,
 				88BC43C51D5FCF5400FFBDEF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		88BC43C61D5FCF5400FFBDEF /* Build configuration list for PBXNativeTarget "bellScheduleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88BC43C71D5FCF5400FFBDEF /* Debug */,
-				88BC43C81D5FCF5400FFBDEF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		88BC43C91D5FCF5400FFBDEF /* Build configuration list for PBXNativeTarget "bellScheduleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88BC43CA1D5FCF5400FFBDEF /* Debug */,
-				88BC43CB1D5FCF5400FFBDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

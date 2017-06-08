@@ -26,11 +26,18 @@ public enum SettingLabel: String {
 
 
 public class Settings {
-	public static func getTimeType() -> TimeSettingType {
-		let userDefaults = UserDefaults.standard;
+	
+	public static let suiteName = "group.com.Stassinopoulos.ari.bellGroup"
+	
+	public static func resolveNilTimeType(_ userDefaults: UserDefaults) {
 		if(userDefaults.object(forKey: SettingLabel.timeType.rawValue) == nil) {
 			userDefaults.setValue(TimeSettingType.twelve.rawValue, forKey: SettingLabel.timeType.rawValue);
 		}
+	}
+	
+	public static func getTimeType() -> TimeSettingType {
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
 		let setting = userDefaults.string(forKey: SettingLabel.timeType.rawValue);
 		if(setting == TimeSettingType.twelve.rawValue) {
 			return TimeSettingType.twelve;
@@ -40,15 +47,13 @@ public class Settings {
 	};
 	
 	public static func setTimeType(type: TimeSettingType) {
-		let userDefaults = UserDefaults.standard;
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
 		userDefaults.setValue(type.rawValue, forKey: SettingLabel.timeType.rawValue);
 	};
 	
 	public static func getColourType() -> ColourSettingType {
-		let userDefaults = UserDefaults.standard;
-		if(userDefaults.object(forKey: SettingLabel.timeType.rawValue) == nil) {
-			userDefaults.setValue(TimeSettingType.twelve.rawValue, forKey: SettingLabel.timeType.rawValue);
-		}
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
 		let setting = userDefaults.string(forKey: SettingLabel.colourType.rawValue);
 		if(setting == ColourSettingType.red.rawValue) {
 			return ColourSettingType.red;
@@ -58,7 +63,7 @@ public class Settings {
 	};
 	
 	public static func setColourType(type: ColourSettingType) {
-		let userDefaults = UserDefaults.standard;
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
 		userDefaults.setValue(type.rawValue, forKey: SettingLabel.colourType.rawValue);
 	};
 	
@@ -71,5 +76,6 @@ public class Settings {
 		} else {
 			return UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 100.0);
 		}
-	}
+	};
+	
 }

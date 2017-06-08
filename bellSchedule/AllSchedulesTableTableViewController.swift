@@ -13,13 +13,22 @@ class AllSchedulesTableTableViewController: UITableViewController {
 	let scheduleWednesday = Timings.scheduleWednesday;
 	let scheduleFriday = Timings.scheduleFriday;
 	let scheduleRally = Timings.scheduleRally;
-	
+	/*SPRING FINALS 2017 [*/
+	let schedule30May = Timings.schedule30May;
+	let schedule31May = Timings.schedule31May;
+	let schedule1June = Timings.schedule1June;
+	/*] END SPRING FINALS 2017*/
+
 	var sections : [[(String, String, String)]] = [];
 	override func viewDidLoad() {
 		sections = [scheduleMondayTuesdayThursday,
 		            scheduleWednesday,
 		            scheduleFriday,
-					scheduleRally]
+		            scheduleRally/*SPRING FINALS 2017 [*/,
+					schedule30May,
+					schedule31May,
+					schedule1June/*] END SPRING FINALS 2017*/
+		];
 		super.viewDidLoad();
 	}
 	override func didReceiveMemoryWarning() {
@@ -27,12 +36,10 @@ class AllSchedulesTableTableViewController: UITableViewController {
 	}
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
-		// #warning Incomplete implementation, return the number of sections
 		return sections.count;
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		// #warning Incomplete implementation, return the number of rows
 		return sections[section].count;
 	}
 	
@@ -45,7 +52,13 @@ class AllSchedulesTableTableViewController: UITableViewController {
 			return "Friday";
 		} else if (section == 3) {
 			return "Rally";
-		}
+		}/*SPRING FINALS 2017 [*/else if(section == 4) {
+			return "30 of May";
+		} else if(section == 5) {
+			return "31 of May";
+		} else if(section == 6) {
+			return "1 June";
+		}/*] END SPRING FINALS 2017*/
 		return "Section \(section)"
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +70,22 @@ class AllSchedulesTableTableViewController: UITableViewController {
 		let label = period.2;
 		let labelText = "\(startTime) – \(endTime)   \(label)";
 		cell.textLabel!.text = labelText;
+		if(cell.textLabel!.text?.contains("Passing Period"))! {
+			cell.textLabel!.font = UIFont.systemFont(ofSize: 10)
+		} else {
+			cell.textLabel!.font = UIFont.systemFont(ofSize: 14)
+		}
 		return cell
+	}
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		let schedule = sections[indexPath.section];
+		let period = schedule[indexPath.row];
+		let text = period.2;
+		if(text.contains("Passing Period")) {
+			return 25;
+		} else {
+			return 44;
+		}
 	}
 	
 }
