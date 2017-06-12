@@ -47,36 +47,47 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
 		determineWeekend()
 		determineHasPeriod()
-		if isWeekend || !hasPeriod {
-			startTimeLabel!.text = "";
-			classLabel!.text = "";
-			nextClassLabel!.text = "";
-			endTimeLabel!.text = "No class.";
+		if(Today().isSummer) {
+			populateEmpty(middle: "☀️🕶👍🏼")
+		} else if isWeekend || !hasPeriod {
+			populateEmpty(middle: "No class.")
 		}
 		if hasPeriod {
-			let periodOffset = CurrentPeriod().periodOffset
-			let currentTimings = CurrentTimings().currentTimings;
-			let period = currentTimings[periodOffset];
-			let startTime = DisplayTime(period.0).resolved;
-			let endTime = DisplayTime(period.1).resolved;
-			let label = period.2;
-			startTimeLabel!.text = startTime;
-			endTimeLabel!.text = endTime;
-			classLabel!.text = label;
-			if currentTimings.count > periodOffset + 1 {
-				let nextPeriod = currentTimings[periodOffset + 1];
-				let nextStart = DisplayTime(nextPeriod.0).resolved;
-				let nextEnd = DisplayTime(nextPeriod.1).resolved;
-				let nextLabel = nextPeriod.2;
-				nextClassLabel!.text = "NEXT: \(nextLabel) (\(nextStart) – \(nextEnd))"
-			} else {
-				nextClassLabel!.text = ""
-			}
+			populateWithTime();
 		}
 		self.view.backgroundColor = Settings.getColour();
 		print(Settings.getColour());
 		completionHandler(NCUpdateResult.newData)
 	}
+	
+	func populateEmpty(middle: String) {
+		startTimeLabel!.text = "";
+		classLabel!.text = "";
+		nextClassLabel!.text = "";
+		endTimeLabel!.text = middle;
+	}
+	
+	func populateWithTime() {
+		let periodOffset = CurrentPeriod().periodOffset
+		let currentTimings = CurrentTimings().currentTimings;
+		let period = currentTimings[periodOffset];
+		let startTime = DisplayTime(period.0).resolved;
+		let endTime = DisplayTime(period.1).resolved;
+		let label = period.2;
+		startTimeLabel!.text = startTime;
+		endTimeLabel!.text = endTime;
+		classLabel!.text = label;
+		if currentTimings.count > periodOffset + 1 {
+			let nextPeriod = currentTimings[periodOffset + 1];
+			let nextStart = DisplayTime(nextPeriod.0).resolved;
+			let nextEnd = DisplayTime(nextPeriod.1).resolved;
+			let nextLabel = nextPeriod.2;
+			nextClassLabel!.text = "NEXT: \(nextLabel) (\(nextStart) – \(nextEnd))"
+		} else {
+			nextClassLabel!.text = ""
+		}
+	}
+	
 	@IBAction func InfoButtonPressed(_ sender: AnyObject) {
 		self.extensionContext?.open(URL(string:"bellSchedule://")!, completionHandler: {_ in
 		})
