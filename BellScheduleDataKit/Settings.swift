@@ -69,12 +69,11 @@ public class Settings {
 	
 	public static func getColour() -> UIColor {
 		let colourType = self.getColourType();
-		if(colourType == .blue) {
+		switch colourType {
+		case .blue:
 			return UIColor(displayP3Red:0.09, green:0.26, blue:0.36, alpha:1.0);
-		} else if(colourType == .red) {
+		case .red:
 			return UIColor(displayP3Red: 0.43, green: 0.06, blue: 0.15, alpha: 1.0);
-		} else {
-			return UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 100.0);
 		}
 	};
 	

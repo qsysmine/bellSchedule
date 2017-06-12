@@ -9,23 +9,23 @@
 import UIKit
 import BellScheduleDataKit
 class ScheduleTableViewController: UITableViewController {
-	
-	
-	var data : [(String, String, String)] = [];
-	var isWeekend = false;
-	var dateString = "";
+	var data : [(String, String, String)] = [],
+	isWeekend = false,
+	dateString = "",
+	isSummer = false;
 	override func viewDidLoad() {
 		super.viewDidLoad();
 		let timer = Timer(timeInterval: 5.0, target: self, selector:#selector(refresh), userInfo: nil, repeats: true);
 		timer.fire();
 	}
-	func refresh() {
+	@objc func refresh() {
 		let weekday = Today().weekday;
 		if(weekday == "SAT" || weekday == "SUN") {
 			isWeekend = true;
 		}
 		dateString = Today().dateString;
 		data = CurrentTimings().currentTimings;
+		isSummer = Today().isSummer;
 		self.tableView.reloadData();
 	}
 	override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +40,7 @@ class ScheduleTableViewController: UITableViewController {
 		DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
 			sender.endRefreshing()
 		})
-
+		
 	}
 	// MARK: - Table view data source
 	
@@ -54,11 +54,14 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath);
-		if(isWeekend || data.count == 0){
-			if(indexPath.row == 0) {
-				cell.textLabel!.text = "No class today";
-				cell.textLabel!.textAlignment = .center;
-			}
+		if(isSummer) {
+			cell.textLabel!.text = "Have a great summer!";
+			cell.textLabel!.textAlignment = .center;
+			return cell;
+		}
+		else if((isWeekend || data.count == 0) && indexPath.row == 0){
+			cell.textLabel!.text = "No class today";
+			cell.textLabel!.textAlignment = .center;
 			return cell;
 		}
 		let currentPeriod = CurrentPeriod().periodOffset;
@@ -68,14 +71,11 @@ class ScheduleTableViewController: UITableViewController {
 		let label = period.2;
 		if(indexPath.row == currentPeriod) {
 			cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 14)
-			if(cell.textLabel!.text?.contains("Passing Period"))! {
-				cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 10)
-			}
 		} else {
 			cell.textLabel!.font = UIFont.systemFont(ofSize: 14);
-			if(cell.textLabel!.text?.contains("Passing Period"))! {
-				cell.textLabel!.font = UIFont.systemFont(ofSize: 10)
-			}
+		}
+		if(cell.textLabel!.text?.contains("Passing Period"))! {
+			cell.textLabel!.font = UIFont.systemFont(ofSize: 10)
 		}
 		cell.textLabel!.text! = "\(startTime) – \(endTime)   \(label)";		
 		return cell

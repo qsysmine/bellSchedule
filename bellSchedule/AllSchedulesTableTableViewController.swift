@@ -9,25 +9,13 @@
 import UIKit
 import BellScheduleDataKit
 class AllSchedulesTableTableViewController: UITableViewController {
-	let scheduleMondayTuesdayThursday = Timings.scheduleMondayTuesdayThursday;
-	let scheduleWednesday = Timings.scheduleWednesday;
-	let scheduleFriday = Timings.scheduleFriday;
-	let scheduleRally = Timings.scheduleRally;
-	/*SPRING FINALS 2017 [*/
-	let schedule30May = Timings.schedule30May;
-	let schedule31May = Timings.schedule31May;
-	let schedule1June = Timings.schedule1June;
-	/*] END SPRING FINALS 2017*/
-
 	var sections : [[(String, String, String)]] = [];
+	
 	override func viewDidLoad() {
-		sections = [scheduleMondayTuesdayThursday,
-		            scheduleWednesday,
-		            scheduleFriday,
-		            scheduleRally/*SPRING FINALS 2017 [*/,
-					schedule30May,
-					schedule31May,
-					schedule1June/*] END SPRING FINALS 2017*/
+		sections = [Timings.scheduleMondayTuesdayThursday,
+		            Timings.scheduleWednesday,
+		            Timings.scheduleFriday,
+		            Timings.scheduleRally
 		];
 		super.viewDidLoad();
 	}
@@ -52,13 +40,7 @@ class AllSchedulesTableTableViewController: UITableViewController {
 			return "Friday";
 		} else if (section == 3) {
 			return "Rally";
-		}/*SPRING FINALS 2017 [*/else if(section == 4) {
-			return "30 of May";
-		} else if(section == 5) {
-			return "31 of May";
-		} else if(section == 6) {
-			return "1 June";
-		}/*] END SPRING FINALS 2017*/
+		}
 		return "Section \(section)"
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

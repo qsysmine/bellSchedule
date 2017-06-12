@@ -86,29 +86,4 @@ public class Timings {
 		("14:36","14:41","Passing Period"),
 		("14:41","15:27","7th Period")
 	];
-	/* SPRING FINALS 2017 [*/
-
-	public static let schedule30May: [(String, String, String)] = [
-		("07:00", "07:55", "0 Period Final (Part I)"),
-		("07:55","08:00","Passing Period"),
-		("08:00", "10:00", "Period 2 Final"),
-		("10:00", "10:15", "Break"),
-		("10:15","10:20","Passing Period"),
-		("10:20", "12:20", "Period 3 Final")
-	];
-	public static let schedule31May: [(String, String, String)] = [
-		("07:00", "07:55", "0 Period Final (Part II)"),
-		("07:55","08:00","Passing Period"),
-		("08:00", "10:00", "Period 4 Final"),
-		("10:00", "10:15", "Break"),
-		("10:15","10:20","Passing Period"),
-		("10:20", "12:20", "Period 5 Final")
-	];
-	public static let schedule1June: [(String, String, String)] = [
-		("08:00", "10:00", "Period 6 Final"),
-		("10:00", "10:15", "Break"),
-		("10:15","10:20","Passing Period"),
-		("10:20", "12:20", "Period 7 Final")
-	];
-	/*] END SPRING FINALS 2017*/
 }

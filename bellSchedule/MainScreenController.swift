@@ -19,8 +19,15 @@ class MainScreenController: UIViewController {
     
     
     let currentTimings = CurrentTimings().currentTimings;
-    func populateFields() {
+    @objc func populateFields() {
         let currentPeriod = CurrentPeriod();
+		if(Today().isSummer) {
+			currentClassText.text! = "";
+			endText.text! = "☀️🕶👍🏼";
+			startText.text! = "";
+			nextClassText.text! = "";
+			return;
+		}
         if(currentPeriod.isCurrentPeriod) {
             let periodOffset = currentPeriod.periodOffset;
             currentClassText.text! = currentTimings[periodOffset].2;
