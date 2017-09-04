@@ -12,18 +12,24 @@ import BellScheduleDataKit
 
 class SettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 	
-	
 	@IBOutlet weak var militaryTimeSwitch: UISwitch!;
 	@IBOutlet weak var colourPickerView: UIPickerView!;
-	var colourData = ["Blue", "Red"];
+    @IBOutlet var iconMatchesSwitch: UISwitch!;
+    @IBOutlet var studentNumberField: UITextField!;
+    
+    var colourData = ["Blue", "Red", "Black"];
 	
 	override func viewDidLoad() {
 		super.viewDidLoad();
 		self.tableView.allowsSelection = false;
 		let timeType = Settings.getTimeType();
 		militaryTimeSwitch.isOn = timeType == .twentyfour;
+		iconMatchesSwitch.isOn = Settings.getIconMatchesColour();
 		colourPickerView.delegate = self;
 		colourPickerView.dataSource = self;
+        if(Settings.getStudentNumber() != nil){
+            studentNumberField.text = Settings.getStudentNumber()!;
+        }
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -35,6 +41,7 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		} else {
 			colourPickerView.selectRow(1, inComponent: 0, animated: true);
 		}
+		
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -51,8 +58,23 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 			break;
 		}
 	}
-	
-	@IBAction func sendFeedback(_ sender: UIButton) {
+    @IBAction func iconMatchSwitched(_ sender: UISwitch) {
+		if(!ProcessInfo.processInfo.isOperatingSystemAtLeast(OperatingSystemVersion(majorVersion: 10, minorVersion: 3, patchVersion: 0))) {
+			sender.isOn = false;
+			let alertController = UIAlertController(title: "Not Supported", message: "Changing the icon is only available for iOS 10.3+", preferredStyle: .alert)
+			let OKAction = UIAlertAction(title: "OK", style: .default) { _ in }
+			alertController.addAction(OKAction)
+			return self.present(alertController, animated: true) {}
+		}
+        Settings.setIconMatchesColour(matches: sender.isOn);
+		if(sender.isOn) {
+			Colour.resolveIcon();
+		} else {
+			Colour.resetIcon();
+		}
+    }
+    
+    @IBAction func sendFeedback(_ sender: UIButton) {
 		let mailVC = MFMailComposeViewController()
 		mailVC.mailComposeDelegate = self
 		mailVC.setToRecipients(["clients0@qsysmine.tk"])
@@ -74,10 +96,24 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		var colourSettingType: ColourSettingType = .blue;
 		if(colour == "Red") {
 			colourSettingType = .red;
+		} else if(colour == "Black") {
+			colourSettingType = .black;
 		}
 		Settings.setColourType(type: colourSettingType);
 		(self.navigationController as! StylisedNavigationController).updateTint()
+		if(Settings.getIconMatchesColour()) { Colour.resolveIcon() }
 	}
+    
+    @IBAction func studentNumberFieldEdited(_ sender: Any) {
+        if(Settings.setStudentNumber(number: studentNumberField.text ?? "")) {
+            UIView.animate(withDuration: 0.5) {
+                self.studentNumberField.backgroundColor = UIColor.green;
+                UIView.animate(withDuration:0.25) {
+                    self.studentNumberField.backgroundColor = UIColor.white;
+                }
+            }
+        }
+    }
 	
 	public func numberOfComponents(in pickerView: UIPickerView) -> Int {
 		return 1;

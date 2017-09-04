@@ -47,9 +47,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
 		determineWeekend()
 		determineHasPeriod()
-		if(Today().isSummer) {
-			populateEmpty(middle: "☀️🕶👍🏼")
-		} else if isWeekend || !hasPeriod {
+		if isWeekend || !hasPeriod {
 			populateEmpty(middle: "No class.")
 		}
 		if hasPeriod {

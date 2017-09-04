@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88039FE61F2E256D006BCB89 /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88039FE51F2E256D006BCB89 /* Colour.swift */; };
+		88039FEE1F2E2D6F006BCB89 /* AppIconBlack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */; };
+		88039FEF1F2E2D6F006BCB89 /* AppIconBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */; };
+		88039FF21F2E3317006BCB89 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88039FF11F2E3317006BCB89 /* StoreKit.framework */; };
+		8812B61F1F3A894A0041EBAE /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812B61E1F3A894A0041EBAE /* Barcode.swift */; };
+		8812BAC71F3AA61D0041EBAE /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC61F3AA61D0041EBAE /* PassKit.framework */; };
+		8812BAC91F3AAB540041EBAE /* StudentIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812BAC81F3AAB540041EBAE /* StudentIDViewController.swift */; };
+		8812BACB1F3AB0380041EBAE /* RSBarcodes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		881FEFFF1D60D0F3003AC1AC /* StylisedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */; };
 		881FF0011D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF0001D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift */; };
 		881FF01F1D60F627003AC1AC /* BellScheduleDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 881FF00F1D60F627003AC1AC /* BellScheduleDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,7 +34,12 @@
 		8832856B1E2926EB00CA9839 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883285691E2926EB00CA9839 /* MainInterface.storyboard */; };
 		8832856F1E2926EB00CA9839 /* BellScheduleWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 883285641E2926EB00CA9839 /* BellScheduleWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		883285731E29272500CA9839 /* BellScheduleDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */; };
+		883794F31F2E210800C6A495 /* AppIconBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883794F11F2E210800C6A495 /* AppIconBlue@2x.png */; };
+		883794F51F2E210800C6A495 /* AppIconBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883794F21F2E210800C6A495 /* AppIconBlue@3x.png */; };
+		883794F91F2E211000C6A495 /* AppIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883794F71F2E211000C6A495 /* AppIconRed@2x.png */; };
+		883794FB1F2E211000C6A495 /* AppIconRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883794F81F2E211000C6A495 /* AppIconRed@3x.png */; };
 		8840CC381E71BD9500B66FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A51D5FCF5400FFBDEF /* Assets.xcassets */; };
+		884FC99B1F3BB8A600E60A56 /* RSBarcodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */; };
 		888AD14F1E2A605100D28DFD /* DisplayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888AD14E1E2A605100D28DFD /* DisplayTime.swift */; };
 		888AD1511E2ABC9400D28DFD /* CurrentSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */; };
 		88A9CC961E27C4810088AE2A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A9CC951E27C4810088AE2A /* Settings.swift */; };
@@ -39,6 +52,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8812BAC41F3AA0FF0041EBAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D08336371A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
+		8812BACC1F3AB0380041EBAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D08336361A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
 		881FF0201D60F627003AC1AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88BC43931D5FCF5300FFBDEF /* Project object */;
@@ -62,6 +89,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8812BACB1F3AB0380041EBAE /* RSBarcodes.framework in Embed Frameworks */,
 				881FF0231D60F627003AC1AC /* BellScheduleDataKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -81,6 +109,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		88039FE51F2E256D006BCB89 /* Colour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colour.swift; sourceTree = "<group>"; };
+		88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconBlack@3x.png"; path = "../../icons/nuBellSchedule/black/AppIconBlack@3x.png"; sourceTree = "<group>"; };
+		88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconBlack@2x.png"; path = "../../icons/nuBellSchedule/black/AppIconBlack@2x.png"; sourceTree = "<group>"; };
+		88039FF11F2E3317006BCB89 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8812B61E1F3A894A0041EBAE /* Barcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSBarcodes.xcodeproj; path = "../../../Downloads/RSBarcodes_Swift-2.3.3/RSBarcodes.xcodeproj"; sourceTree = "<group>"; };
+		8812BAC61F3AA61D0041EBAE /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		8812BAC81F3AAB540041EBAE /* StudentIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentIDViewController.swift; sourceTree = "<group>"; };
 		881342FB1E50E36E00B0FBA8 /* bellSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bellSchedule.entitlements; sourceTree = "<group>"; };
 		881342FC1E50E3AB00B0FBA8 /* BellScheduleWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BellScheduleWidget.entitlements; sourceTree = "<group>"; };
 		881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylisedNavigationController.swift; sourceTree = "<group>"; };
@@ -95,6 +131,10 @@
 		883285671E2926EB00CA9839 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8832856A1E2926EB00CA9839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8832856C1E2926EB00CA9839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883794F11F2E210800C6A495 /* AppIconBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlue@2x.png"; sourceTree = "<group>"; };
+		883794F21F2E210800C6A495 /* AppIconBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlue@3x.png"; sourceTree = "<group>"; };
+		883794F71F2E211000C6A495 /* AppIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRed@2x.png"; sourceTree = "<group>"; };
+		883794F81F2E211000C6A495 /* AppIconRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRed@3x.png"; sourceTree = "<group>"; };
 		888AD14E1E2A605100D28DFD /* DisplayTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayTime.swift; sourceTree = "<group>"; };
 		888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentSchedule.swift; sourceTree = "<group>"; };
 		88A9CC951E27C4810088AE2A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -121,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884FC99B1F3BB8A600E60A56 /* RSBarcodes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8812BAC71F3AA61D0041EBAE /* PassKit.framework in Frameworks */,
+				88039FF21F2E3317006BCB89 /* StoreKit.framework in Frameworks */,
 				8832855F1E2926A800CA9839 /* NotificationCenter.framework in Frameworks */,
 				881FF0221D60F627003AC1AC /* BellScheduleDataKit.framework in Frameworks */,
 			);
@@ -145,6 +188,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88039FF31F2E3348006BCB89 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				88039FE51F2E256D006BCB89 /* Colour.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		8812BAC11F3AA0FF0041EBAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		881FF00E1D60F627003AC1AC /* BellScheduleDataKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +227,7 @@
 				88A9CC951E27C4810088AE2A /* Settings.swift */,
 				888AD14E1E2A605100D28DFD /* DisplayTime.swift */,
 				888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */,
+				8812B61E1F3A894A0041EBAE /* Barcode.swift */,
 			);
 			name = BellScheduleData;
 			sourceTree = "<group>";
@@ -175,6 +235,8 @@
 		881FF0391D60F8EB003AC1AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8812BAC61F3AA61D0041EBAE /* PassKit.framework */,
+				88039FF11F2E3317006BCB89 /* StoreKit.framework */,
 				883285481E29252D00CA9839 /* CoreGraphics.framework */,
 				8832854F1E29254C00CA9839 /* NotificationCenter.framework */,
 				88F5EA5F1ECF463C009CBCEB /* IntentsUI.framework */,
@@ -193,9 +255,23 @@
 			path = BellScheduleWidget;
 			sourceTree = "<group>";
 		};
+		883794EE1F2E204700C6A495 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */,
+				88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */,
+				883794F71F2E211000C6A495 /* AppIconRed@2x.png */,
+				883794F81F2E211000C6A495 /* AppIconRed@3x.png */,
+				883794F11F2E210800C6A495 /* AppIconBlue@2x.png */,
+				883794F21F2E210800C6A495 /* AppIconBlue@3x.png */,
+			);
+			name = res;
+			sourceTree = "<group>";
+		};
 		88BC43921D5FCF5300FFBDEF = {
 			isa = PBXGroup;
 			children = (
+				8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */,
 				88BC439D1D5FCF5400FFBDEF /* bellSchedule */,
 				881FF00E1D60F627003AC1AC /* BellScheduleDataKit */,
 				883285661E2926EB00CA9839 /* BellScheduleWidget */,
@@ -219,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				881342FB1E50E36E00B0FBA8 /* bellSchedule.entitlements */,
+				883794EE1F2E204700C6A495 /* res */,
 				88BC43D21D5FD1CF00FFBDEF /* Storyboard */,
 				88BC43D11D5FD1CB00FFBDEF /* Code */,
 				88BC43CE1D5FD0BA00FFBDEF /* Assets */,
@@ -240,6 +317,7 @@
 		88BC43D11D5FD1CB00FFBDEF /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				88039FF31F2E3348006BCB89 /* Utilities */,
 				88BC43D31D5FD1DB00FFBDEF /* UI */,
 			);
 			name = Code;
@@ -256,6 +334,7 @@
 		88BC43D31D5FD1DB00FFBDEF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8812BAC81F3AAB540041EBAE /* StudentIDViewController.swift */,
 				88BC2A6D1D5FF3C6000AEE52 /* ScheduleTableViewController.swift */,
 				88BC2A6F1D5FF42E000AEE52 /* MainScreenController.swift */,
 				881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */,
@@ -329,6 +408,7 @@
 			dependencies = (
 				881FF0211D60F627003AC1AC /* PBXTargetDependency */,
 				8832856E1E2926EB00CA9839 /* PBXTargetDependency */,
+				8812BACD1F3AB0380041EBAE /* PBXTargetDependency */,
 			);
 			name = bellSchedule;
 			productName = bellSchedule;
@@ -376,8 +456,14 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 0;
+							};
+							com.apple.Wallet = {
+								enabled = 1;
 							};
 						};
 					};
@@ -394,6 +480,12 @@
 			mainGroup = 88BC43921D5FCF5300FFBDEF;
 			productRefGroup = 88BC439C1D5FCF5400FFBDEF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8812BAC11F3AA0FF0041EBAE /* Products */;
+					ProjectRef = 8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				88BC439A1D5FCF5300FFBDEF /* bellSchedule */,
@@ -402,6 +494,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSBarcodes.framework;
+			remoteRef = 8812BAC41F3AA0FF0041EBAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		881FF00B1D60F627003AC1AC /* Resources */ = {
@@ -425,7 +527,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */,
+				88039FEE1F2E2D6F006BCB89 /* AppIconBlack@3x.png in Resources */,
+				883794F91F2E211000C6A495 /* AppIconRed@2x.png in Resources */,
+				883794F31F2E210800C6A495 /* AppIconBlue@2x.png in Resources */,
+				88039FEF1F2E2D6F006BCB89 /* AppIconBlack@2x.png in Resources */,
 				88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */,
+				883794F51F2E210800C6A495 /* AppIconBlue@3x.png in Resources */,
+				883794FB1F2E211000C6A495 /* AppIconRed@3x.png in Resources */,
 				88BC43A41D5FCF5400FFBDEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +555,7 @@
 				888AD1511E2ABC9400D28DFD /* CurrentSchedule.swift in Sources */,
 				881FF0311D60F6A8003AC1AC /* CurrentPeriod.swift in Sources */,
 				881FF02F1D60F6A8003AC1AC /* Today.swift in Sources */,
+				8812B61F1F3A894A0041EBAE /* Barcode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +572,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BC2A6E1D5FF3C6000AEE52 /* ScheduleTableViewController.swift in Sources */,
+				88039FE61F2E256D006BCB89 /* Colour.swift in Sources */,
 				881FF0011D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift in Sources */,
+				8812BAC91F3AAB540041EBAE /* StudentIDViewController.swift in Sources */,
 				88BC2A701D5FF42E000AEE52 /* MainScreenController.swift in Sources */,
 				881FEFFF1D60D0F3003AC1AC /* StylisedNavigationController.swift in Sources */,
 				88BC439F1D5FCF5400FFBDEF /* AppDelegate.swift in Sources */,
@@ -474,6 +585,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8812BACD1F3AB0380041EBAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSBarcodes;
+			targetProxy = 8812BACC1F3AB0380041EBAE /* PBXContainerItemProxy */;
+		};
 		881FF0211D60F627003AC1AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 881FF00C1D60F627003AC1AC /* BellScheduleDataKit */;

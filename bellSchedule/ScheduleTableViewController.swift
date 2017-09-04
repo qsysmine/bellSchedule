@@ -11,8 +11,7 @@ import BellScheduleDataKit
 class ScheduleTableViewController: UITableViewController {
 	var data : [(String, String, String)] = [],
 	isWeekend = false,
-	dateString = "",
-	isSummer = false;
+	dateString = "";
 	override func viewDidLoad() {
 		super.viewDidLoad();
 		let timer = Timer(timeInterval: 5.0, target: self, selector:#selector(refresh), userInfo: nil, repeats: true);
@@ -25,7 +24,6 @@ class ScheduleTableViewController: UITableViewController {
 		}
 		dateString = Today().dateString;
 		data = CurrentTimings().currentTimings;
-		isSummer = Today().isSummer;
 		self.tableView.reloadData();
 	}
 	override func viewDidAppear(_ animated: Bool) {
@@ -54,12 +52,7 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath);
-		if(isSummer) {
-			cell.textLabel!.text = "Have a great summer!";
-			cell.textLabel!.textAlignment = .center;
-			return cell;
-		}
-		else if((isWeekend || data.count == 0) && indexPath.row == 0){
+		if((isWeekend || data.count == 0) && indexPath.row == 0){
 			cell.textLabel!.text = "No class today";
 			cell.textLabel!.textAlignment = .center;
 			return cell;
@@ -74,7 +67,7 @@ class ScheduleTableViewController: UITableViewController {
 		} else {
 			cell.textLabel!.font = UIFont.systemFont(ofSize: 14);
 		}
-		if(cell.textLabel!.text?.contains("Passing Period"))! {
+		if(label.contains("Passing Period")) {
 			cell.textLabel!.font = UIFont.systemFont(ofSize: 10)
 		}
 		cell.textLabel!.text! = "\(startTime) – \(endTime)   \(label)";		

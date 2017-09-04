@@ -14,6 +14,7 @@ class MainScreenController: UIViewController {
     @IBOutlet weak var nextClassText: UILabel!
     @IBOutlet weak var startText: UILabel!
     @IBOutlet weak var endText: UILabel!
+    @IBOutlet var studentIDButton: UIButton!
     @IBOutlet weak var currentClassText: UILabel!
     
     
@@ -21,13 +22,7 @@ class MainScreenController: UIViewController {
     let currentTimings = CurrentTimings().currentTimings;
     @objc func populateFields() {
         let currentPeriod = CurrentPeriod();
-		if(Today().isSummer) {
-			currentClassText.text! = "";
-			endText.text! = "☀️🕶👍🏼";
-			startText.text! = "";
-			nextClassText.text! = "";
-			return;
-		}
+        
         if(currentPeriod.isCurrentPeriod) {
             let periodOffset = currentPeriod.periodOffset;
             currentClassText.text! = currentTimings[periodOffset].2;
@@ -46,20 +41,25 @@ class MainScreenController: UIViewController {
             nextClassText.text! = "";
         }
     }
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		UIView.animate(withDuration: 0.5, animations: {
-			self.view.backgroundColor = Settings.getColour()
-		});
-		populateFields()
-	}
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.view.backgroundColor = Settings.getColour()
+        });
+        if(Settings.getStudentNumber() != nil) {
+            studentIDButton.isEnabled = true;
+        } else {
+            studentIDButton.isEnabled = false;
+        }
+        populateFields()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.view.backgroundColor = Settings.getColour()
-		let date = NSDate().addingTimeInterval(5)
-		let timer = Timer(fireAt: date as Date, interval: 0, target: self, selector: #selector(populateFields), userInfo: nil, repeats: true)
-		RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+        self.view.backgroundColor = Settings.getColour()
+        let date = NSDate().addingTimeInterval(5)
+        let timer = Timer(fireAt: date as Date, interval: 0, target: self, selector: #selector(populateFields), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
         timer.fire();
         // Do any additional setup after loading the view.
     }
