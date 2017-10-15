@@ -37,9 +37,11 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		let colourType = Settings.getColourType();
 		print(colourType);
 		if(colourType == .blue) {
-			colourPickerView.selectRow(0, inComponent: 0, animated: true);
-		} else {
-			colourPickerView.selectRow(1, inComponent: 0, animated: true);
+			colourPickerView.selectRow(0, inComponent: 0, animated: false);
+		} else if(colourType == .red) {
+			colourPickerView.selectRow(1, inComponent: 0, animated: false);
+		} else  {
+			colourPickerView.selectRow(2, inComponent: 0, animated: false);
 		}
 		
 	}

@@ -24,7 +24,15 @@ class ScheduleTableViewController: UITableViewController {
 		}
 		dateString = Today().dateString;
 		data = CurrentTimings().currentTimings;
-		self.tableView.reloadData();
+		SpecialTimings.lazyCheckForSpecialTimings { (areSpecialTimings, _) in
+			if(SpecialTimings.getSpecialTimings() != nil) {
+				self.data = SpecialTimings.getSpecialTimings()!;
+				self.navigationItem.title = "Today's Schedule ✨";
+			} else {
+				self.navigationItem.title = "Today's Schedule";
+			}
+			DispatchQueue.main.async { self.tableView.reloadData(); }
+		}
 	}
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated);
@@ -35,9 +43,13 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	@IBAction func doRefresh(_ sender: UIRefreshControl) {
 		refresh();
-		DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
-			sender.endRefreshing()
-		})
+		SpecialTimings.checkForSpecialTimings { (areSpecialTimings, error) in
+			self.refresh();
+			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+				sender.endRefreshing()
+			})
+		}
+		
 		
 	}
 	// MARK: - Table view data source
@@ -47,12 +59,12 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if(isWeekend || data.count == 0) {return 1;}
+		if(data.count == 0) {return 1;}
 		return data.count;
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath);
-		if((isWeekend || data.count == 0) && indexPath.row == 0){
+		if((data.count == 0) && indexPath.row == 0){
 			cell.textLabel!.text = "No class today";
 			cell.textLabel!.textAlignment = .center;
 			return cell;
@@ -75,7 +87,7 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		if(!isWeekend) {
+		if(!isWeekend && data.count > indexPath.row) {
 			let period = data[indexPath.row];
 			let text = period.2;
 			if(text.contains("Passing Period")) {

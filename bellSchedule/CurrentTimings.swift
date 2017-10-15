@@ -12,6 +12,11 @@ public class CurrentTimings {
 	public init() {
 		let dayOfTheWeek = Today().weekday;
 		let dateString = Today().dateString;
+		if(SpecialTimings.getSpecialTimings() != nil) {
+			currentTimings = SpecialTimings.getSpecialTimings() ?? [(String, String, String)]();
+			return;
+		}
+		
 		/*RALLIES 2017 [*/
 		//if() {
 		//	currentTimings = Timings.scheduleRally;

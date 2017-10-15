@@ -45,17 +45,21 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	}
 	
 	func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
-		determineWeekend()
-		determineHasPeriod()
-		if isWeekend || !hasPeriod {
-			populateEmpty(middle: "No class.")
+		
+		SpecialTimings.lazyCheckForSpecialTimings { (areSpecialTimings, error) in
+			self.determineWeekend()
+			self.determineHasPeriod()
+			if self.isWeekend || !self.hasPeriod {
+				self.populateEmpty(middle: "No class.")
+			}
+			if self.hasPeriod {
+				self.populateWithTime();
+			}
+			self.view.backgroundColor = Settings.getColour();
+			print(Settings.getColour());
+			completionHandler(NCUpdateResult.newData)
 		}
-		if hasPeriod {
-			populateWithTime();
-		}
-		self.view.backgroundColor = Settings.getColour();
-		print(Settings.getColour());
-		completionHandler(NCUpdateResult.newData)
+		
 	}
 	
 	func populateEmpty(middle: String) {

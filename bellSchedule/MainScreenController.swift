@@ -19,10 +19,9 @@ class MainScreenController: UIViewController {
     
     
     
-    let currentTimings = CurrentTimings().currentTimings;
     @objc func populateFields() {
+		let currentTimings = CurrentTimings().currentTimings;
         let currentPeriod = CurrentPeriod();
-        
         if(currentPeriod.isCurrentPeriod) {
             let periodOffset = currentPeriod.periodOffset;
             currentClassText.text! = currentTimings[periodOffset].2;
@@ -52,8 +51,11 @@ class MainScreenController: UIViewController {
             studentIDButton.isEnabled = false;
         }
         populateFields()
+		SpecialTimings.lazyCheckForSpecialTimings { (areSpecialTimings, error) in
+			DispatchQueue.main.async {self.populateFields()}
+		}
     }
-    
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = Settings.getColour()

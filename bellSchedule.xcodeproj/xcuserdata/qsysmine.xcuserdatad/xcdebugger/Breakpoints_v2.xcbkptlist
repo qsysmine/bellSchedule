@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bellSchedule/MainScreenController.swift"
-            timestampString = "524156224.208477"
+            timestampString = "526246759.518911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87">
+            startingLineNumber = "89"
+            endingLineNumber = "89">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -102,11 +102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BellScheduleWidget/TodayViewController.swift"
-            timestampString = "524156224.208477"
+            timestampString = "528571136.835876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95">
+            startingLineNumber = "99"
+            endingLineNumber = "99">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bellSchedule/ScheduleTableViewController.swift"
-            timestampString = "524156224.208477"
+            timestampString = "528571136.83599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94">
+            startingLineNumber = "106"
+            endingLineNumber = "106">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -130,11 +130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bellSchedule/CurrentTimings.swift"
-            timestampString = "524156224.208477"
+            timestampString = "526242541.766421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36">
+            startingLineNumber = "41"
+            endingLineNumber = "41">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -144,13 +144,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bellSchedule/SettingsTableViewController.swift"
-            timestampString = "523940112.861262"
+            timestampString = "526245355.141459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "SettingsTableViewController"
-            landmarkType = "3">
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -172,31 +172,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RSBarcodes.RSUPCEGenerator.convert2UPC_A (Swift.String) -&gt; Swift.String"
+                  symbolName = "RSBarcodes.RSUPCEGenerator.convert2UPC_A(Swift.String) -&gt; Swift.String"
                   moduleName = "RSBarcodes"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qsysmine/Downloads/RSBarcodes_Swift-2.3.3/Source/RSUPCEGenerator.swift"
-                  timestampString = "524585966.758143"
+                  timestampString = "529600503.79156"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "3567">
+                  offsetFromSymbolStart = "3834">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RSBarcodes.RSUPCEGenerator.convert2UPC_A (Swift.String) -&gt; Swift.String"
+                  symbolName = "RSBarcodes.RSUPCEGenerator.convert2UPC_A(Swift.String) -&gt; Swift.String"
                   moduleName = "RSBarcodes"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qsysmine/Downloads/RSBarcodes_Swift-2.3.3/Source/RSUPCEGenerator.swift"
-                  timestampString = "524585966.762719"
+                  timestampString = "529600503.795933"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "4487">
+                  offsetFromSymbolStart = "4699">
                </Location>
             </Locations>
          </BreakpointContent>

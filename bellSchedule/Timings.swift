@@ -9,7 +9,7 @@
 import Foundation
 
 public class Timings {
-	public static let scheduleMondayTuesdayThursday: [(String,String,String)] = [
+	public static var scheduleMondayTuesdayThursday:[(String,String,String)] = [
 		("07:00","07:51","0 Period"),
 		("07:51","08:00","Passing Period"),
 		("08:00","08:51","1st Period"),

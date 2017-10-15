@@ -15,6 +15,7 @@
 		8812BAC71F3AA61D0041EBAE /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC61F3AA61D0041EBAE /* PassKit.framework */; };
 		8812BAC91F3AAB540041EBAE /* StudentIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812BAC81F3AAB540041EBAE /* StudentIDViewController.swift */; };
 		8812BACB1F3AB0380041EBAE /* RSBarcodes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8817AA261F5E00660074E852 /* mondayTuesdayThursday.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9211F5D8F4B004E30D2 /* mondayTuesdayThursday.bell */; };
 		881FEFFF1D60D0F3003AC1AC /* StylisedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */; };
 		881FF0011D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF0001D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift */; };
 		881FF01F1D60F627003AC1AC /* BellScheduleDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 881FF00F1D60F627003AC1AC /* BellScheduleDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +50,11 @@
 		88BC43A41D5FCF5400FFBDEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A21D5FCF5400FFBDEF /* Main.storyboard */; };
 		88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A51D5FCF5400FFBDEF /* Assets.xcassets */; };
 		88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A71D5FCF5400FFBDEF /* LaunchScreen.storyboard */; };
+		88D4F9241F5D8F5C004E30D2 /* wednesday.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9231F5D8F5C004E30D2 /* wednesday.bell */; };
+		88D4F9261F5D8F67004E30D2 /* friday.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9251F5D8F67004E30D2 /* friday.bell */; };
+		88D4F9281F5D8F75004E30D2 /* rally.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9271F5D8F75004E30D2 /* rally.bell */; };
+		88D4F92C1F5D933C004E30D2 /* SpecialTimings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4F92B1F5D933C004E30D2 /* SpecialTimings.swift */; };
+		88D4F92E1F5D986D004E30D2 /* BellFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4F92D1F5D986D004E30D2 /* BellFileParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +159,12 @@
 		88BC43E31D5FE0E300FFBDEF /* CurrentPeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentPeriod.swift; path = ../bellSchedule/CurrentPeriod.swift; sourceTree = "<group>"; };
 		88BC43E51D5FE12F00FFBDEF /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = ../bellSchedule/DateExtension.swift; sourceTree = "<group>"; };
 		88BC43E71D5FE4EA00FFBDEF /* CurrentTimings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentTimings.swift; path = ../bellSchedule/CurrentTimings.swift; sourceTree = "<group>"; };
+		88D4F9211F5D8F4B004E30D2 /* mondayTuesdayThursday.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mondayTuesdayThursday.bell; sourceTree = "<group>"; };
+		88D4F9231F5D8F5C004E30D2 /* wednesday.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wednesday.bell; sourceTree = "<group>"; };
+		88D4F9251F5D8F67004E30D2 /* friday.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = friday.bell; sourceTree = "<group>"; };
+		88D4F9271F5D8F75004E30D2 /* rally.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rally.bell; sourceTree = "<group>"; };
+		88D4F92B1F5D933C004E30D2 /* SpecialTimings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialTimings.swift; sourceTree = "<group>"; };
+		88D4F92D1F5D986D004E30D2 /* BellFileParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellFileParser.swift; sourceTree = "<group>"; };
 		88F5EA5F1ECF463C009CBCEB /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -207,16 +219,8 @@
 		881FF00E1D60F627003AC1AC /* BellScheduleDataKit */ = {
 			isa = PBXGroup;
 			children = (
-				881FF02B1D60F67B003AC1AC /* BellScheduleData */,
-				881FF00F1D60F627003AC1AC /* BellScheduleDataKit.h */,
-				881FF0101D60F627003AC1AC /* Info.plist */,
-			);
-			path = BellScheduleDataKit;
-			sourceTree = "<group>";
-		};
-		881FF02B1D60F67B003AC1AC /* BellScheduleData */ = {
-			isa = PBXGroup;
-			children = (
+				88D4F92B1F5D933C004E30D2 /* SpecialTimings.swift */,
+				88D4F92D1F5D986D004E30D2 /* BellFileParser.swift */,
 				88BC43D71D5FD2BB00FFBDEF /* Timings.swift */,
 				88BC43D91D5FD73A00FFBDEF /* Period.swift */,
 				88BC43DB1D5FD7D300FFBDEF /* Today.swift */,
@@ -228,8 +232,14 @@
 				888AD14E1E2A605100D28DFD /* DisplayTime.swift */,
 				888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */,
 				8812B61E1F3A894A0041EBAE /* Barcode.swift */,
+				88D4F9211F5D8F4B004E30D2 /* mondayTuesdayThursday.bell */,
+				88D4F9231F5D8F5C004E30D2 /* wednesday.bell */,
+				88D4F9251F5D8F67004E30D2 /* friday.bell */,
+				88D4F9271F5D8F75004E30D2 /* rally.bell */,
+				881FF00F1D60F627003AC1AC /* BellScheduleDataKit.h */,
+				881FF0101D60F627003AC1AC /* Info.plist */,
 			);
-			name = BellScheduleData;
+			path = BellScheduleDataKit;
 			sourceTree = "<group>";
 		};
 		881FF0391D60F8EB003AC1AC /* Frameworks */ = {
@@ -510,6 +520,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8817AA261F5E00660074E852 /* mondayTuesdayThursday.bell in Resources */,
+				88D4F9261F5D8F67004E30D2 /* friday.bell in Resources */,
+				88D4F9241F5D8F5C004E30D2 /* wednesday.bell in Resources */,
+				88D4F9281F5D8F75004E30D2 /* rally.bell in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +569,9 @@
 				888AD1511E2ABC9400D28DFD /* CurrentSchedule.swift in Sources */,
 				881FF0311D60F6A8003AC1AC /* CurrentPeriod.swift in Sources */,
 				881FF02F1D60F6A8003AC1AC /* Today.swift in Sources */,
+				88D4F92E1F5D986D004E30D2 /* BellFileParser.swift in Sources */,
 				8812B61F1F3A894A0041EBAE /* Barcode.swift in Sources */,
+				88D4F92C1F5D933C004E30D2 /* SpecialTimings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
