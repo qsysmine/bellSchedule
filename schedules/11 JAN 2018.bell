@@ -1,0 +1,20 @@
+11 JAN 2018
+==
+"07:00","07:51","0 Period";
+"07:51","08:00","Passing Period";
+"08:00","08:51","1st Period";
+"08:51","08:56","Passing Period";
+"08:56","09:51","2nd Period";
+"09:51","09:56","Passing Period";
+"09:56","10:47","3rd Period";
+"10:47","10:52","Passing Period";
+"10:52","11:43","4th Period";
+"11:43","11:48","Passing Period";
+"11:48","12:08","FMP";
+"12:09","12:39","Lunch";
+"12:39","12:44","Passing Period";
+"12:44","13:35","5th Period";
+"13:35","13:40","Passing Period";
+"13:40","14:31","6th Period";
+"14:31","14:36","Passing Period";
+"14:36","15:27","7th Period"
