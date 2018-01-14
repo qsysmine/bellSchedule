@@ -63,6 +63,7 @@ class ScheduleTableViewController: UITableViewController {
 		return data.count;
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let customSchedule = Settings.getCustomSchedule();
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath);
 		if((data.count == 0) && indexPath.row == 0){
 			cell.textLabel!.text = "No class today";
@@ -73,7 +74,7 @@ class ScheduleTableViewController: UITableViewController {
 		let period = data[indexPath.row];
 		let startTime = DisplayTime(period.0).resolved;
 		let endTime = DisplayTime(period.1).resolved;
-		let label = period.2;
+		let label = customSchedule.replaceWithCustomScheduleString(period.2);
 		if(indexPath.row == currentPeriod) {
 			cell.textLabel!.font = UIFont.boldSystemFont(ofSize: 14)
 		} else {

@@ -29,9 +29,24 @@ class Colour {
 					return UIApplication.shared.setAlternateIconName("AppIconBlack") { (err:Error?) in
 						print("set icon error：\(String(describing: err))")
 					};
+				case .gold:
+					return UIApplication.shared.setAlternateIconName("AppIconGold") { (err:Error?) in
+						print("set icon error：\(String(describing: err))")
+					};
+				case .silver:
+					return UIApplication.shared.setAlternateIconName("AppIconSilver") { (err:Error?) in
+						print("set icon error：\(String(describing: err))")
+					};
+
+				case .white:
+					return UIApplication.shared.setAlternateIconName("AppIconWhite") { (err:Error?) in
+						print("set icon error：\(String(describing: err))")
+					};
+
 				}
-			}
 		}
+		}
+		
 	}
 	public static func resetIcon() {
 		if #available(iOS 10.3, *) {

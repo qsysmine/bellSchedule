@@ -12,10 +12,11 @@ class AllSchedulesTableTableViewController: UITableViewController {
 	var sections : [[(String, String, String)]] = [];
 	
 	override func viewDidLoad() {
-		sections = [Timings.scheduleMondayTuesdayThursday,
-		            Timings.scheduleWednesday,
-		            Timings.scheduleFriday,
-		            Timings.scheduleRally
+		sections = [
+			Timings.scheduleMondayTuesdayThursday,
+			Timings.scheduleWednesday,
+			Timings.scheduleFriday,
+			Timings.scheduleRally
 		];
 		super.viewDidLoad();
 	}
@@ -32,24 +33,27 @@ class AllSchedulesTableTableViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		if(section == 0) {
+		switch(section) {
+		case 0:
 			return "Monday, Tuesday, and Thursday";
-		} else if (section == 1) {
+		case 1:
 			return "Wednesday";
-		} else if (section == 2) {
+		case 2:
 			return "Friday";
-		} else if (section == 3) {
+		case 3:
 			return "Rally";
+		default:
+			return "Section \(section)"
 		}
-		return "Section \(section)"
 	}
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let customSchedule = Settings.getCustomSchedule();
 		let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath)
 		let schedule = sections[indexPath.section];
 		let period = schedule[indexPath.row];
 		let startTime = DisplayTime(period.0).resolved;
 		let endTime = DisplayTime(period.1).resolved;
-		let label = period.2;
+		let label = customSchedule.replaceWithCustomScheduleString(period.2);
 		let labelText = "\(startTime) – \(endTime)   \(label)";
 		cell.textLabel!.text = labelText;
 		if(cell.textLabel!.text?.contains("Passing Period"))! {

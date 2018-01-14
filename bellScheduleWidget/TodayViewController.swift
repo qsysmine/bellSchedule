@@ -23,11 +23,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		super.viewDidLoad()
 		determineWeekend()
 	}
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated);
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated);
 		self.view.backgroundColor = Settings.getColour();
-    }
+	}
 	func determineWeekend() {
 		let weekday = Today().weekday;
 		if weekday == "SAT" || weekday == "SUN" {
@@ -45,23 +45,35 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	}
 	
 	func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
-		
+		update()
 		SpecialTimings.lazyCheckForSpecialTimings { (areSpecialTimings, error) in
-			self.determineWeekend()
-			self.determineHasPeriod()
-			if self.isWeekend || !self.hasPeriod {
-				self.populateEmpty(middle: "No class.")
+			DispatchQueue.main.async {
+				self.update()
 			}
-			if self.hasPeriod {
-				self.populateWithTime();
-			}
-			self.view.backgroundColor = Settings.getColour();
-			print(Settings.getColour());
-			completionHandler(NCUpdateResult.newData)
 		}
 		
 	}
-	
+	func update() {
+		self.determineWeekend()
+		self.determineHasPeriod()
+		if self.isWeekend || !self.hasPeriod {
+			self.populateEmpty(middle: "No class.")
+		}
+		if self.hasPeriod {
+			self.populateWithTime();
+		}
+		self.view.backgroundColor = Settings.getColour();
+		UIView.animate(withDuration: 0.5, animations: {
+			self.view.backgroundColor = Settings.getColour()
+			if(Settings.getColourType() == .white) {
+				print("these should be running");
+				[self.startTimeLabel, self.nextClassLabel, self.endTimeLabel, self.classLabel].forEach({ $0.textColor = UIColor.black;});
+			} else {
+				self.endTimeLabel.textColor = .white;
+				[self.startTimeLabel, self.nextClassLabel,self.classLabel].forEach {$0.textColor = .groupTableViewBackground}
+			}
+		});
+	}
 	func populateEmpty(middle: String) {
 		startTimeLabel!.text = "";
 		classLabel!.text = "";
@@ -70,12 +82,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	}
 	
 	func populateWithTime() {
+		let customSchedule = Settings.getCustomSchedule();
 		let periodOffset = CurrentPeriod().periodOffset
 		let currentTimings = CurrentTimings().currentTimings;
 		let period = currentTimings[periodOffset];
 		let startTime = DisplayTime(period.0).resolved;
 		let endTime = DisplayTime(period.1).resolved;
-		let label = period.2;
+		let label = customSchedule.replaceWithCustomScheduleString(period.2);
 		startTimeLabel!.text = startTime;
 		endTimeLabel!.text = endTime;
 		classLabel!.text = label;
@@ -83,7 +96,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 			let nextPeriod = currentTimings[periodOffset + 1];
 			let nextStart = DisplayTime(nextPeriod.0).resolved;
 			let nextEnd = DisplayTime(nextPeriod.1).resolved;
-			let nextLabel = nextPeriod.2;
+			let nextLabel = customSchedule.replaceWithCustomScheduleString(nextPeriod.2);
 			nextClassLabel!.text = "NEXT: \(nextLabel) (\(nextStart) – \(nextEnd))"
 		} else {
 			nextClassLabel!.text = ""

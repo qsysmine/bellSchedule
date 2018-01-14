@@ -11,10 +11,7 @@
 		88039FEE1F2E2D6F006BCB89 /* AppIconBlack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */; };
 		88039FEF1F2E2D6F006BCB89 /* AppIconBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */; };
 		88039FF21F2E3317006BCB89 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88039FF11F2E3317006BCB89 /* StoreKit.framework */; };
-		8812B61F1F3A894A0041EBAE /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812B61E1F3A894A0041EBAE /* Barcode.swift */; };
-		8812BAC71F3AA61D0041EBAE /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC61F3AA61D0041EBAE /* PassKit.framework */; };
-		8812BAC91F3AAB540041EBAE /* StudentIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812BAC81F3AAB540041EBAE /* StudentIDViewController.swift */; };
-		8812BACB1F3AB0380041EBAE /* RSBarcodes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8816BBE11FBD16D20030A91A /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816BBE01FBD16D20030A91A /* IAPHelper.swift */; };
 		8817AA261F5E00660074E852 /* mondayTuesdayThursday.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9211F5D8F4B004E30D2 /* mondayTuesdayThursday.bell */; };
 		881FEFFF1D60D0F3003AC1AC /* StylisedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */; };
 		881FF0011D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF0001D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift */; };
@@ -40,7 +37,14 @@
 		883794F91F2E211000C6A495 /* AppIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883794F71F2E211000C6A495 /* AppIconRed@2x.png */; };
 		883794FB1F2E211000C6A495 /* AppIconRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 883794F81F2E211000C6A495 /* AppIconRed@3x.png */; };
 		8840CC381E71BD9500B66FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A51D5FCF5400FFBDEF /* Assets.xcassets */; };
-		884FC99B1F3BB8A600E60A56 /* RSBarcodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */; };
+		885B679E1FBDDCC1006F64F1 /* AppIconWhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B679C1FBDDCC1006F64F1 /* AppIconWhite@3x.png */; };
+		885B679F1FBDDCC1006F64F1 /* AppIconWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B679D1FBDDCC1006F64F1 /* AppIconWhite@2x.png */; };
+		885B67A21FBDDCCE006F64F1 /* AppIconSilver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A01FBDDCCE006F64F1 /* AppIconSilver@2x.png */; };
+		885B67A31FBDDCCE006F64F1 /* AppIconSilver@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A11FBDDCCE006F64F1 /* AppIconSilver@3x.png */; };
+		885B67A61FBDDCDA006F64F1 /* AppIconWhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A41FBDDCDA006F64F1 /* AppIconWhite@3x.png */; };
+		885B67A71FBDDCDA006F64F1 /* AppIconWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A51FBDDCDA006F64F1 /* AppIconWhite@2x.png */; };
+		885B67AA1FBDDDCE006F64F1 /* AppIconGold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A81FBDDDCE006F64F1 /* AppIconGold@3x.png */; };
+		885B67AB1FBDDDCE006F64F1 /* AppIconGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A91FBDDDCE006F64F1 /* AppIconGold@2x.png */; };
 		888AD14F1E2A605100D28DFD /* DisplayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888AD14E1E2A605100D28DFD /* DisplayTime.swift */; };
 		888AD1511E2ABC9400D28DFD /* CurrentSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */; };
 		88A9CC961E27C4810088AE2A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A9CC951E27C4810088AE2A /* Settings.swift */; };
@@ -50,28 +54,19 @@
 		88BC43A41D5FCF5400FFBDEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A21D5FCF5400FFBDEF /* Main.storyboard */; };
 		88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A51D5FCF5400FFBDEF /* Assets.xcassets */; };
 		88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BC43A71D5FCF5400FFBDEF /* LaunchScreen.storyboard */; };
+		88C9119A1FB8BA4D009089ED /* PremiumSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C911991FB8BA4D009089ED /* PremiumSettingsTableViewController.swift */; };
 		88D4F9241F5D8F5C004E30D2 /* wednesday.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9231F5D8F5C004E30D2 /* wednesday.bell */; };
 		88D4F9261F5D8F67004E30D2 /* friday.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9251F5D8F67004E30D2 /* friday.bell */; };
 		88D4F9281F5D8F75004E30D2 /* rally.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9271F5D8F75004E30D2 /* rally.bell */; };
 		88D4F92C1F5D933C004E30D2 /* SpecialTimings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4F92B1F5D933C004E30D2 /* SpecialTimings.swift */; };
 		88D4F92E1F5D986D004E30D2 /* BellFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D4F92D1F5D986D004E30D2 /* BellFileParser.swift */; };
+		88DB21C51FE6CA9900EC5816 /* PremiumPromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB21C41FE6CA9900EC5816 /* PremiumPromoView.swift */; };
+		88F73A4F1FB9FCE8006F3931 /* CustomSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F73A4E1FB9FCE8006F3931 /* CustomSchedule.swift */; };
+		88FB10521FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */; };
+		88FB10551FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8812BAC41F3AA0FF0041EBAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D08336371A202E81004EE128;
-			remoteInfo = RSBarcodes;
-		};
-		8812BACC1F3AB0380041EBAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D08336361A202E81004EE128;
-			remoteInfo = RSBarcodes;
-		};
 		881FF0201D60F627003AC1AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88BC43931D5FCF5300FFBDEF /* Project object */;
@@ -95,7 +90,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8812BACB1F3AB0380041EBAE /* RSBarcodes.framework in Embed Frameworks */,
 				881FF0231D60F627003AC1AC /* BellScheduleDataKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -119,12 +113,9 @@
 		88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconBlack@3x.png"; path = "../../icons/nuBellSchedule/black/AppIconBlack@3x.png"; sourceTree = "<group>"; };
 		88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconBlack@2x.png"; path = "../../icons/nuBellSchedule/black/AppIconBlack@2x.png"; sourceTree = "<group>"; };
 		88039FF11F2E3317006BCB89 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		8812B61E1F3A894A0041EBAE /* Barcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
-		8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSBarcodes.xcodeproj; path = "../../../Downloads/RSBarcodes_Swift-2.3.3/RSBarcodes.xcodeproj"; sourceTree = "<group>"; };
-		8812BAC61F3AA61D0041EBAE /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
-		8812BAC81F3AAB540041EBAE /* StudentIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentIDViewController.swift; sourceTree = "<group>"; };
 		881342FB1E50E36E00B0FBA8 /* bellSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bellSchedule.entitlements; sourceTree = "<group>"; };
 		881342FC1E50E3AB00B0FBA8 /* BellScheduleWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BellScheduleWidget.entitlements; sourceTree = "<group>"; };
+		8816BBE01FBD16D20030A91A /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylisedNavigationController.swift; sourceTree = "<group>"; };
 		881FF0001D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSchedulesTableTableViewController.swift; sourceTree = "<group>"; };
 		881FF00D1D60F627003AC1AC /* BellScheduleDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BellScheduleDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +132,14 @@
 		883794F21F2E210800C6A495 /* AppIconBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlue@3x.png"; sourceTree = "<group>"; };
 		883794F71F2E211000C6A495 /* AppIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRed@2x.png"; sourceTree = "<group>"; };
 		883794F81F2E211000C6A495 /* AppIconRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRed@3x.png"; sourceTree = "<group>"; };
+		885B679C1FBDDCC1006F64F1 /* AppIconWhite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconWhite@3x.png"; sourceTree = "<group>"; };
+		885B679D1FBDDCC1006F64F1 /* AppIconWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconWhite@2x.png"; sourceTree = "<group>"; };
+		885B67A01FBDDCCE006F64F1 /* AppIconSilver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconSilver@2x.png"; sourceTree = "<group>"; };
+		885B67A11FBDDCCE006F64F1 /* AppIconSilver@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconSilver@3x.png"; sourceTree = "<group>"; };
+		885B67A41FBDDCDA006F64F1 /* AppIconWhite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconWhite@3x.png"; path = "../../icons/nuBellSchedule/white/AppIconWhite@3x.png"; sourceTree = "<group>"; };
+		885B67A51FBDDCDA006F64F1 /* AppIconWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconWhite@2x.png"; path = "../../icons/nuBellSchedule/white/AppIconWhite@2x.png"; sourceTree = "<group>"; };
+		885B67A81FBDDDCE006F64F1 /* AppIconGold@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconGold@3x.png"; sourceTree = "<group>"; };
+		885B67A91FBDDDCE006F64F1 /* AppIconGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconGold@2x.png"; sourceTree = "<group>"; };
 		888AD14E1E2A605100D28DFD /* DisplayTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayTime.swift; sourceTree = "<group>"; };
 		888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentSchedule.swift; sourceTree = "<group>"; };
 		88A9CC951E27C4810088AE2A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -159,13 +158,18 @@
 		88BC43E31D5FE0E300FFBDEF /* CurrentPeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentPeriod.swift; path = ../bellSchedule/CurrentPeriod.swift; sourceTree = "<group>"; };
 		88BC43E51D5FE12F00FFBDEF /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = ../bellSchedule/DateExtension.swift; sourceTree = "<group>"; };
 		88BC43E71D5FE4EA00FFBDEF /* CurrentTimings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentTimings.swift; path = ../bellSchedule/CurrentTimings.swift; sourceTree = "<group>"; };
+		88C911991FB8BA4D009089ED /* PremiumSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumSettingsTableViewController.swift; sourceTree = "<group>"; };
 		88D4F9211F5D8F4B004E30D2 /* mondayTuesdayThursday.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mondayTuesdayThursday.bell; sourceTree = "<group>"; };
 		88D4F9231F5D8F5C004E30D2 /* wednesday.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wednesday.bell; sourceTree = "<group>"; };
 		88D4F9251F5D8F67004E30D2 /* friday.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = friday.bell; sourceTree = "<group>"; };
 		88D4F9271F5D8F75004E30D2 /* rally.bell */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rally.bell; sourceTree = "<group>"; };
 		88D4F92B1F5D933C004E30D2 /* SpecialTimings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialTimings.swift; sourceTree = "<group>"; };
 		88D4F92D1F5D986D004E30D2 /* BellFileParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellFileParser.swift; sourceTree = "<group>"; };
+		88DB21C41FE6CA9900EC5816 /* PremiumPromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPromoView.swift; sourceTree = "<group>"; };
 		88F5EA5F1ECF463C009CBCEB /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		88F73A4E1FB9FCE8006F3931 /* CustomSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchedule.swift; sourceTree = "<group>"; };
+		88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchedulePeriodTableViewCell.swift; sourceTree = "<group>"; };
+		88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScheduleTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +177,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				884FC99B1F3BB8A600E60A56 /* RSBarcodes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +193,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8812BAC71F3AA61D0041EBAE /* PassKit.framework in Frameworks */,
 				88039FF21F2E3317006BCB89 /* StoreKit.framework in Frameworks */,
 				8832855F1E2926A800CA9839 /* NotificationCenter.framework in Frameworks */,
 				881FF0221D60F627003AC1AC /* BellScheduleDataKit.framework in Frameworks */,
@@ -203,17 +205,10 @@
 		88039FF31F2E3348006BCB89 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8816BBE01FBD16D20030A91A /* IAPHelper.swift */,
 				88039FE51F2E256D006BCB89 /* Colour.swift */,
 			);
 			name = Utilities;
-			sourceTree = "<group>";
-		};
-		8812BAC11F3AA0FF0041EBAE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		881FF00E1D60F627003AC1AC /* BellScheduleDataKit */ = {
@@ -229,9 +224,9 @@
 				88BC43E51D5FE12F00FFBDEF /* DateExtension.swift */,
 				88BC43E71D5FE4EA00FFBDEF /* CurrentTimings.swift */,
 				88A9CC951E27C4810088AE2A /* Settings.swift */,
+				88F73A4E1FB9FCE8006F3931 /* CustomSchedule.swift */,
 				888AD14E1E2A605100D28DFD /* DisplayTime.swift */,
 				888AD1501E2ABC9400D28DFD /* CurrentSchedule.swift */,
-				8812B61E1F3A894A0041EBAE /* Barcode.swift */,
 				88D4F9211F5D8F4B004E30D2 /* mondayTuesdayThursday.bell */,
 				88D4F9231F5D8F5C004E30D2 /* wednesday.bell */,
 				88D4F9251F5D8F67004E30D2 /* friday.bell */,
@@ -245,7 +240,6 @@
 		881FF0391D60F8EB003AC1AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8812BAC61F3AA61D0041EBAE /* PassKit.framework */,
 				88039FF11F2E3317006BCB89 /* StoreKit.framework */,
 				883285481E29252D00CA9839 /* CoreGraphics.framework */,
 				8832854F1E29254C00CA9839 /* NotificationCenter.framework */,
@@ -268,8 +262,16 @@
 		883794EE1F2E204700C6A495 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				885B679D1FBDDCC1006F64F1 /* AppIconWhite@2x.png */,
+				885B67A51FBDDCDA006F64F1 /* AppIconWhite@2x.png */,
+				885B679C1FBDDCC1006F64F1 /* AppIconWhite@3x.png */,
+				885B67A01FBDDCCE006F64F1 /* AppIconSilver@2x.png */,
+				885B67A11FBDDCCE006F64F1 /* AppIconSilver@3x.png */,
 				88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */,
+				885B67A41FBDDCDA006F64F1 /* AppIconWhite@3x.png */,
 				88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */,
+				885B67A91FBDDDCE006F64F1 /* AppIconGold@2x.png */,
+				885B67A81FBDDDCE006F64F1 /* AppIconGold@3x.png */,
 				883794F71F2E211000C6A495 /* AppIconRed@2x.png */,
 				883794F81F2E211000C6A495 /* AppIconRed@3x.png */,
 				883794F11F2E210800C6A495 /* AppIconBlue@2x.png */,
@@ -281,7 +283,6 @@
 		88BC43921D5FCF5300FFBDEF = {
 			isa = PBXGroup;
 			children = (
-				8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */,
 				88BC439D1D5FCF5400FFBDEF /* bellSchedule */,
 				881FF00E1D60F627003AC1AC /* BellScheduleDataKit */,
 				883285661E2926EB00CA9839 /* BellScheduleWidget */,
@@ -344,7 +345,10 @@
 		88BC43D31D5FD1DB00FFBDEF /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8812BAC81F3AAB540041EBAE /* StudentIDViewController.swift */,
+				88DB21C41FE6CA9900EC5816 /* PremiumPromoView.swift */,
+				88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */,
+				88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */,
+				88C911991FB8BA4D009089ED /* PremiumSettingsTableViewController.swift */,
 				88BC2A6D1D5FF3C6000AEE52 /* ScheduleTableViewController.swift */,
 				88BC2A6F1D5FF42E000AEE52 /* MainScreenController.swift */,
 				881FEFFE1D60D0F3003AC1AC /* StylisedNavigationController.swift */,
@@ -418,7 +422,6 @@
 			dependencies = (
 				881FF0211D60F627003AC1AC /* PBXTargetDependency */,
 				8832856E1E2926EB00CA9839 /* PBXTargetDependency */,
-				8812BACD1F3AB0380041EBAE /* PBXTargetDependency */,
 			);
 			name = bellSchedule;
 			productName = bellSchedule;
@@ -473,7 +476,7 @@
 								enabled = 0;
 							};
 							com.apple.Wallet = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -490,12 +493,6 @@
 			mainGroup = 88BC43921D5FCF5300FFBDEF;
 			productRefGroup = 88BC439C1D5FCF5400FFBDEF /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8812BAC11F3AA0FF0041EBAE /* Products */;
-					ProjectRef = 8812BAC01F3AA0FF0041EBAE /* RSBarcodes.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				88BC439A1D5FCF5300FFBDEF /* bellSchedule */,
@@ -504,16 +501,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8812BAC51F3AA0FF0041EBAE /* RSBarcodes.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RSBarcodes.framework;
-			remoteRef = 8812BAC41F3AA0FF0041EBAE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		881FF00B1D60F627003AC1AC /* Resources */ = {
@@ -540,14 +527,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885B67AA1FBDDDCE006F64F1 /* AppIconGold@3x.png in Resources */,
 				88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */,
 				88039FEE1F2E2D6F006BCB89 /* AppIconBlack@3x.png in Resources */,
 				883794F91F2E211000C6A495 /* AppIconRed@2x.png in Resources */,
+				885B67AB1FBDDDCE006F64F1 /* AppIconGold@2x.png in Resources */,
 				883794F31F2E210800C6A495 /* AppIconBlue@2x.png in Resources */,
+				885B67A31FBDDCCE006F64F1 /* AppIconSilver@3x.png in Resources */,
+				885B67A21FBDDCCE006F64F1 /* AppIconSilver@2x.png in Resources */,
+				885B679F1FBDDCC1006F64F1 /* AppIconWhite@2x.png in Resources */,
 				88039FEF1F2E2D6F006BCB89 /* AppIconBlack@2x.png in Resources */,
+				885B67A61FBDDCDA006F64F1 /* AppIconWhite@3x.png in Resources */,
 				88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */,
+				885B679E1FBDDCC1006F64F1 /* AppIconWhite@3x.png in Resources */,
 				883794F51F2E210800C6A495 /* AppIconBlue@3x.png in Resources */,
 				883794FB1F2E211000C6A495 /* AppIconRed@3x.png in Resources */,
+				885B67A71FBDDCDA006F64F1 /* AppIconWhite@2x.png in Resources */,
 				88BC43A41D5FCF5400FFBDEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				888AD14F1E2A605100D28DFD /* DisplayTime.swift in Sources */,
+				88F73A4F1FB9FCE8006F3931 /* CustomSchedule.swift in Sources */,
 				881FF0321D60F6A8003AC1AC /* DateExtension.swift in Sources */,
 				881FF02E1D60F6A8003AC1AC /* Period.swift in Sources */,
 				881FF02D1D60F6A8003AC1AC /* Timings.swift in Sources */,
@@ -570,7 +566,6 @@
 				881FF0311D60F6A8003AC1AC /* CurrentPeriod.swift in Sources */,
 				881FF02F1D60F6A8003AC1AC /* Today.swift in Sources */,
 				88D4F92E1F5D986D004E30D2 /* BellFileParser.swift in Sources */,
-				8812B61F1F3A894A0041EBAE /* Barcode.swift in Sources */,
 				88D4F92C1F5D933C004E30D2 /* SpecialTimings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,13 +582,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C9119A1FB8BA4D009089ED /* PremiumSettingsTableViewController.swift in Sources */,
 				88BC2A6E1D5FF3C6000AEE52 /* ScheduleTableViewController.swift in Sources */,
 				88039FE61F2E256D006BCB89 /* Colour.swift in Sources */,
 				881FF0011D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift in Sources */,
-				8812BAC91F3AAB540041EBAE /* StudentIDViewController.swift in Sources */,
+				8816BBE11FBD16D20030A91A /* IAPHelper.swift in Sources */,
 				88BC2A701D5FF42E000AEE52 /* MainScreenController.swift in Sources */,
 				881FEFFF1D60D0F3003AC1AC /* StylisedNavigationController.swift in Sources */,
 				88BC439F1D5FCF5400FFBDEF /* AppDelegate.swift in Sources */,
+				88DB21C51FE6CA9900EC5816 /* PremiumPromoView.swift in Sources */,
+				88FB10521FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift in Sources */,
+				88FB10551FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift in Sources */,
 				883285471E29205300CA9839 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,11 +600,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8812BACD1F3AB0380041EBAE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RSBarcodes;
-			targetProxy = 8812BACC1F3AB0380041EBAE /* PBXContainerItemProxy */;
-		};
 		881FF0211D60F627003AC1AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 881FF00C1D60F627003AC1AC /* BellScheduleDataKit */;
@@ -782,6 +776,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -829,6 +824,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

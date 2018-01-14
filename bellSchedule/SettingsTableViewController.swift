@@ -1,3 +1,4 @@
+
 //
 //  SettingsTableViewController.swift
 //  bellSchedule
@@ -9,15 +10,20 @@
 import UIKit
 import MessageUI
 import BellScheduleDataKit
+import CoreTelephony
 
-class SettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class SettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, MFMessageComposeViewControllerDelegate{
 	
 	@IBOutlet weak var militaryTimeSwitch: UISwitch!;
 	@IBOutlet weak var colourPickerView: UIPickerView!;
     @IBOutlet var iconMatchesSwitch: UISwitch!;
-    @IBOutlet var studentNumberField: UITextField!;
+    @IBOutlet var feedBackButton: UIButton!
+    @IBOutlet var updatesButton: UIButton!
+	@IBOutlet var goToSpecialSchedule: UIButton!;
+	var isGoingToPremiumSettings: Bool = false;
     
-    var colourData = ["Blue", "Red", "Black"];
+	var colourData: [(String, ColourSettingType)] = [("Blue",.blue), ("Red",.red), ("Black",.black)];
+	let premiumColourData: [(String, ColourSettingType)] = [("Blue",.blue), ("Red",.red), ("Black",.black), ("Gold",.gold), ("Silver",.silver), ("White",.white)];
 	
 	override func viewDidLoad() {
 		super.viewDidLoad();
@@ -27,23 +33,35 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		iconMatchesSwitch.isOn = Settings.getIconMatchesColour();
 		colourPickerView.delegate = self;
 		colourPickerView.dataSource = self;
-        if(Settings.getStudentNumber() != nil){
-            studentNumberField.text = Settings.getStudentNumber()!;
-        }
+		if(Settings.hasPremium()) {
+			colourData = premiumColourData;
+		} else {
+			goToSpecialSchedule.isEnabled = false;
+		}
 	}
-	
+    
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated);
-		let colourType = Settings.getColourType();
-		print(colourType);
-		if(colourType == .blue) {
-			colourPickerView.selectRow(0, inComponent: 0, animated: false);
-		} else if(colourType == .red) {
-			colourPickerView.selectRow(1, inComponent: 0, animated: false);
-		} else  {
-			colourPickerView.selectRow(2, inComponent: 0, animated: false);
+		if(self.isGoingToPremiumSettings) {
+			self.performSegue(withIdentifier: "settingsToPremiumSettingsSegue", sender: self)
 		}
-		
+		let colourType = Settings.getColourType();
+        if(!MFMailComposeViewController.canSendMail()) {
+            feedBackButton.isEnabled = false;
+        }
+        if (!MFMessageComposeViewController.canSendText()) {
+			updatesButton.isEnabled = false;
+        }
+		if(!ProcessInfo.processInfo.isOperatingSystemAtLeast(OperatingSystemVersion(majorVersion: 10, minorVersion: 3, patchVersion: 0))) {
+			iconMatchesSwitch.isEnabled = false
+		}
+		colourPickerView.selectRow(colourData.index(where:{$0.1 == colourType}) ?? 0, inComponent: 0, animated: false);
+		if(colourData.index(where:{$0.1 == colourType}) == nil) {
+			Settings.setColourType(type: .blue);
+		}
+		colourData = (Settings.hasPremium() ? premiumColourData : colourData);
+		colourPickerView.reloadAllComponents();
+		goToSpecialSchedule.isEnabled = Settings.hasPremium();
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -85,37 +103,30 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		present(mailVC, animated: true, completion: nil)
 	}
 	
+	@IBAction func subscribeToUpdates() {
+		let messageVC = MFMessageComposeViewController()
+		messageVC.body = "follow DHSBellSchedule";
+		messageVC.recipients = ["404-04"]
+		messageVC.messageComposeDelegate = self;
+		
+		self.present(messageVC, animated: true, completion: nil)
+	}
+	
+	
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		return colourData.count;
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return colourData[row];
+		return colourData[row].0;
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		let colour = colourData[row];
-		var colourSettingType: ColourSettingType = .blue;
-		if(colour == "Red") {
-			colourSettingType = .red;
-		} else if(colour == "Black") {
-			colourSettingType = .black;
-		}
-		Settings.setColourType(type: colourSettingType);
+		Settings.setColourType(type: colour.1);
 		(self.navigationController as! StylisedNavigationController).updateTint()
 		if(Settings.getIconMatchesColour()) { Colour.resolveIcon() }
 	}
-    
-    @IBAction func studentNumberFieldEdited(_ sender: Any) {
-        if(Settings.setStudentNumber(number: studentNumberField.text ?? "")) {
-            UIView.animate(withDuration: 0.5) {
-                self.studentNumberField.backgroundColor = UIColor.green;
-                UIView.animate(withDuration:0.25) {
-                    self.studentNumberField.backgroundColor = UIColor.white;
-                }
-            }
-        }
-    }
 	
 	public func numberOfComponents(in pickerView: UIPickerView) -> Int {
 		return 1;
@@ -123,5 +134,30 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 	
 	func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
 		controller.dismiss(animated: true, completion: nil)
+	}
+	func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+		switch (result) {
+		case .cancelled:
+			self.dismiss(animated: true, completion: nil)
+		case .failed:
+			self.dismiss(animated: true, completion: nil)
+			let alertController = UIAlertController(title: "Something's gone wrong.", message: "We couldn't subscribe you. Please try again later.", preferredStyle: .alert)
+			let OKAction = UIAlertAction(title: "Okay", style: .default) { _ in }
+			alertController.addAction(OKAction)
+			return self.present(alertController, animated: true) {}
+		case .sent:
+			self.dismiss(animated: true, completion: nil)
+			let alertController = UIAlertController(title: "Thank you", message: "It looks like you've been successfully subscribed to DHS Bell Schedule App updates.", preferredStyle: .alert)
+			let OKAction = UIAlertAction(title: "You're welcome", style: .default) { _ in }
+			alertController.addAction(OKAction)
+			return self.present(alertController, animated: true) {}
+		}
+	}
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if(segue.identifier != nil && segue.identifier == "settingsToPremiumSettingsSegue") {
+			if(self.isGoingToPremiumSettings) {
+				self.isGoingToPremiumSettings = false;
+			}
+		}
 	}
 }

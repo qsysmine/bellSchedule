@@ -16,17 +16,11 @@ public class CurrentTimings {
 			currentTimings = SpecialTimings.getSpecialTimings() ?? [(String, String, String)]();
 			return;
 		}
-		
-		/*RALLIES 2017 [*/
-		//if() {
-		//	currentTimings = Timings.scheduleRally;
-		//} else
-		/*] END RALLIES 2017*/
-		/*DAYS OFF 2017 [*/
-		if(dateString == "04 SEP 2017" || dateString == "10 NOV 2017" || dateString.range(of: "2[1-4] NOV 2017", options: .regularExpression, range: nil, locale: nil) != nil || dateString.range(of: "2[2-9] DEC 2017", options: .regularExpression, range: nil, locale: nil) != nil || dateString.range(of: "[1-6] JAN 2018", options: .regularExpression, range: nil, locale: nil) != nil) {
+		/*DAYS OFF 2018 [*/
+		if(dateString == "15 JAN 2018") {
 			currentTimings = [];
 		} else
-		/*] END DAYS OFF 2017*/
+		/*] END DAYS OFF 2018*/
 		if(dayOfTheWeek == "MON" || dayOfTheWeek == "TUE" || dayOfTheWeek == "THU") {
 			currentTimings = Timings.scheduleMondayTuesdayThursday;
 		} else if(dayOfTheWeek == "WED") {

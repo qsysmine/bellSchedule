@@ -31,7 +31,7 @@ class BellFileParser {
 		var timingsToBe = [(String, String, String)]();
 		fileLines.forEach { (line) in
 			let lineComponents = line.components(separatedBy: "\",\"");
-			if(lineComponents.count == 0) {
+			if(lineComponents.count != 3) {
 				return;
 			}
 			timingsToBe.append((lineComponents[0].trimmingCharacters(in: ["\""]), lineComponents[1], lineComponents[2].components(separatedBy: "\"").joined(separator: "")));
