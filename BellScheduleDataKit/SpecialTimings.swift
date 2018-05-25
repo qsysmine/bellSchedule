@@ -24,9 +24,9 @@ public enum SpecialTimingsError: Error {
 public class SpecialTimings {
 	public static let suiteName = "group.com.Stassinopoulos.ari.bellGroup"
 	
-	public static func checkForSpecialTimings(_ callback: @escaping (Bool, SpecialTimingsError?) -> Void) {
+	public static func checkForSpecialTimings(for date: Date, _ callback: @escaping (Bool, SpecialTimingsError?) -> Void) {
 		print("explicit network check");
-		let dateString = Today().dateString;
+		let dateString = Today(Date()).dateString;
 		let unq = Date().timeIntervalSince1970;
 		let allowedCharacterSet = CharacterSet(charactersIn: "!*'();:@&=+$,/?%#[] ").inverted;
 		let urlEncodedDateString = dateString.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet) ?? "";
@@ -43,7 +43,7 @@ public class SpecialTimings {
 			}
 			let dataString = String(data: data, encoding: .utf8);
 			let dataStringComponents = dataString?.components(separatedBy: "\n==\n");
-			if(dataStringComponents?[0] == Today().dateString) {
+			if(dataStringComponents?[0] == Today(Date()).dateString) {
 				let bellFileContents = dataStringComponents?[1] ?? "";
 				if(BellFileParser(bellFileContents).timings != nil) {
 					self.saveSpecialTimings(timings: bellFileContents);
@@ -65,7 +65,7 @@ public class SpecialTimings {
 	}
 	private static func saveSpecialTimings(timings: String?) {
 		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
-		let dateString = Today().dateString;
+		let dateString = Today(Date()).dateString;
 		userDefaults.set(timings, forKey: SpecialTimingsLabels.timings.rawValue);
 		if(timings == nil) {
 			userDefaults.set(nil, forKey: SpecialTimingsLabels.timingDate.rawValue);
@@ -74,10 +74,10 @@ public class SpecialTimings {
 		userDefaults.set(dateString, forKey: SpecialTimingsLabels.timingDate.rawValue);
 		self.setLastChecked()
 	}
-	public static func getSpecialTimings() -> [(String, String, String)]? {
+	public static func getSpecialTimings(for date: Date) -> [(String, String, String)]? {
 		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
 		let specialTimingsDate = userDefaults.string(forKey: SpecialTimingsLabels.timingDate.rawValue);
-		if(specialTimingsDate == nil || specialTimingsDate! != Today().dateString) {
+		if(specialTimingsDate == nil || specialTimingsDate! != Today(date).dateString) {
 			return nil;
 		}
 		let specialTimings = userDefaults.string(forKey: SpecialTimingsLabels.timings.rawValue);
@@ -86,12 +86,12 @@ public class SpecialTimings {
 		}
 		return BellFileParser(specialTimings!).timings!;
 	}
-	public static func lazyCheckForSpecialTimings(_ callback: @escaping (Bool, SpecialTimingsError?) -> Void) {
-		if(self.getSpecialTimings() != nil) {
+	public static func lazyCheckForSpecialTimings(for date: Date, _ callback: @escaping (Bool, SpecialTimingsError?) -> Void) {
+		if(self.getSpecialTimings(for: date) != nil) {
 			return callback(true, nil);
 		}
 		if(Date().timeIntervalSince1970 - 21600 > getLastChecked()) {
-			return self.checkForSpecialTimings(callback);
+			return self.checkForSpecialTimings(for: date, callback);
 		}
 		callback(false, nil);
 

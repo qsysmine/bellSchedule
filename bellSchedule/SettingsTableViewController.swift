@@ -20,6 +20,8 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
     @IBOutlet var feedBackButton: UIButton!
     @IBOutlet var updatesButton: UIButton!
 	@IBOutlet var goToSpecialSchedule: UIButton!;
+	@IBOutlet var goToPremiumSettings: UIButton!;
+    @IBOutlet var goToNotificationsSettings: UIButton!;
 	var isGoingToPremiumSettings: Bool = false;
     
 	var colourData: [(String, ColourSettingType)] = [("Blue",.blue), ("Red",.red), ("Black",.black)];
@@ -35,8 +37,13 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		colourPickerView.dataSource = self;
 		if(Settings.hasPremium()) {
 			colourData = premiumColourData;
+		
+           
+            goToPremiumSettings.isEnabled = false;
+			goToPremiumSettings.setTitle("Thank you for purchasing premium!", for: .normal);
 		} else {
 			goToSpecialSchedule.isEnabled = false;
+            goToNotificationsSettings.isEnabled = false;
 		}
 	}
     
@@ -60,7 +67,9 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 			Settings.setColourType(type: .blue);
 		}
 		colourData = (Settings.hasPremium() ? premiumColourData : colourData);
-		colourPickerView.reloadAllComponents();
+        colourPickerView.reloadAllComponents();
+        
+        goToNotificationsSettings.isEnabled = Settings.hasPremium();
 		goToSpecialSchedule.isEnabled = Settings.hasPremium();
 	}
 	

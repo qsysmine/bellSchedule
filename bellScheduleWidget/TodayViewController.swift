@@ -29,7 +29,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		self.view.backgroundColor = Settings.getColour();
 	}
 	func determineWeekend() {
-		let weekday = Today().weekday;
+		let weekday = Today(Date()).weekday;
 		if weekday == "SAT" || weekday == "SUN" {
 			isWeekend = true;
 			return;
@@ -46,7 +46,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	
 	func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
 		update()
-		SpecialTimings.lazyCheckForSpecialTimings { (areSpecialTimings, error) in
+		SpecialTimings.lazyCheckForSpecialTimings(for: Date()) { (areSpecialTimings, error) in
+			LocalNotifications.clearNotifications();
+			LocalNotifications.registerNotificationsForWeek(after: Date());
 			DispatchQueue.main.async {
 				self.update()
 			}
@@ -84,7 +86,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	func populateWithTime() {
 		let customSchedule = Settings.getCustomSchedule();
 		let periodOffset = CurrentPeriod().periodOffset
-		let currentTimings = CurrentTimings().currentTimings;
+		let currentTimings = CurrentTimings(Date()).currentTimings;
 		let period = currentTimings[periodOffset];
 		let startTime = DisplayTime(period.0).resolved;
 		let endTime = DisplayTime(period.1).resolved;

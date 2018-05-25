@@ -31,6 +31,9 @@ public enum SettingLabel: String {
 	case customSchedule = "settingCustomSchedule"
 	case lastShownPromo = "promoHomeScreenLastSeenAt"
 	case userHasCancelledPromo = "promoHomeScreenUserHasCancelled"
+	case hasNotifications = "settingHasClassEndingNotifications"
+	case hasZeroPeriodNotifications = "settingHasZeroPeriodClassEndingNotifications"
+	case notificationWarning = "settingClassEndingNotificationWarning"
 }
 
 
@@ -67,6 +70,42 @@ public class Settings {
 		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
 		self.resolveNilTimeType(userDefaults);
 		userDefaults.set(true, forKey: SettingLabel.userHasCancelledPromo.rawValue);
+	}
+	
+	public static func getNotificationWarning() -> Int {
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
+		return userDefaults.integer(forKey: SettingLabel.notificationWarning.rawValue);
+	}
+	
+	public static func setNotificationWarning(notificationWarning: Int) {
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
+		userDefaults.set(notificationWarning, forKey: SettingLabel.notificationWarning.rawValue);
+	}
+	
+	public static func getShowsZeroPeriodNotifications() -> Bool {
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
+		return userDefaults.bool(forKey: SettingLabel.hasZeroPeriodNotifications.rawValue);
+	}
+	
+	public static func setShowsZeroPeriodNotifications(showsZeroPeriodNotifications: Bool) {
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
+		userDefaults.set(showsZeroPeriodNotifications, forKey: SettingLabel.hasZeroPeriodNotifications.rawValue);
+	}
+	
+	public static func hasNotifications() -> Bool {
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
+		return userDefaults.bool(forKey: SettingLabel.hasNotifications.rawValue);
+	}
+	
+	public static func setHasNotifications(hasNotifications: Bool) {
+		let userDefaults = UserDefaults(suiteName: self.suiteName)!;
+		self.resolveNilTimeType(userDefaults);
+		userDefaults.set(hasNotifications, forKey: SettingLabel.hasNotifications.rawValue);
 	}
 	
 	public static func hasPremium() -> Bool {

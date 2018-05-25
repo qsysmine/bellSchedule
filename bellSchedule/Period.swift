@@ -11,7 +11,7 @@ public class Period {
     public var startDate: Date;
     public var endDate: Date;
     public init(start: String, end: String) {
-        let today = Today();
+        let today = Today(Date());
         let todayDateString = today.dateString;
         let dateFormat = "dd MMM yyyy HH:mm";
         let dateFormatter = DateFormatter();

@@ -10,8 +10,7 @@ import Foundation
 public class Today {
     public var weekday: String = "";
     public var dateString: String = "";
-    public init() {
-        let date = Date();
+	public init(_ date: Date) {
 		self.weekday = self.computeWeekday(date);
 		self.dateString = self.computeDateString(date);
     }

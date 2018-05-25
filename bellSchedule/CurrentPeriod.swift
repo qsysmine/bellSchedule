@@ -12,7 +12,7 @@ public class CurrentPeriod {
     public var isCurrentPeriod:Bool;
     public init() {
         let currentDate = Date();
-        let currentSchedule = CurrentSchedule().currentSchedule;
+        let currentSchedule = CurrentSchedule(currentDate).currentSchedule;
         var offset = 0;
         isCurrentPeriod = false;
         for period in currentSchedule {

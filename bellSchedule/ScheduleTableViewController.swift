@@ -18,15 +18,15 @@ class ScheduleTableViewController: UITableViewController {
 		timer.fire();
 	}
 	@objc func refresh() {
-		let weekday = Today().weekday;
+		let weekday = Today(Date()).weekday;
 		if(weekday == "SAT" || weekday == "SUN") {
 			isWeekend = true;
 		}
-		dateString = Today().dateString;
-		data = CurrentTimings().currentTimings;
-		SpecialTimings.lazyCheckForSpecialTimings { (areSpecialTimings, _) in
-			if(SpecialTimings.getSpecialTimings() != nil) {
-				self.data = SpecialTimings.getSpecialTimings()!;
+		dateString = Today(Date()).dateString;
+		data = CurrentTimings(Date()).currentTimings;
+		SpecialTimings.lazyCheckForSpecialTimings(for: Date()) { (areSpecialTimings, _) in
+			if(SpecialTimings.getSpecialTimings(for: Date()) != nil) {
+				self.data = SpecialTimings.getSpecialTimings(for: Date())!;
 				self.navigationItem.title = "Today's Schedule ✨";
 			} else {
 				self.navigationItem.title = "Today's Schedule";
@@ -43,7 +43,7 @@ class ScheduleTableViewController: UITableViewController {
 	}
 	@IBAction func doRefresh(_ sender: UIRefreshControl) {
 		refresh();
-		SpecialTimings.checkForSpecialTimings { (areSpecialTimings, error) in
+		SpecialTimings.checkForSpecialTimings(for: Date()) { (areSpecialTimings, error) in
 			self.refresh();
 			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
 				sender.endRefreshing()

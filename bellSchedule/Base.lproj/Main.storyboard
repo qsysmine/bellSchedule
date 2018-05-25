@@ -159,7 +159,7 @@
         <scene sceneID="Tsn-GG-eJc">
             <objects>
                 <tableViewController id="A48-ZC-2KH" customClass="ScheduleTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="S7F-kQ-NAm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="S7F-kQ-NAm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,7 +276,7 @@
         <scene sceneID="2CQ-XF-O21">
             <objects>
                 <tableViewController id="RgI-ZO-lAd" customClass="SettingsTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4I0-Qr-VjU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4I0-Qr-VjU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -361,10 +361,36 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Notifications" id="9SF-k2-84J" userLabel="Notifications">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedbackCell" id="uUC-ck-xEC" userLabel="notificationsCell">
+                                        <rect key="frame" x="0.0" y="355.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uUC-ck-xEC" id="7F7-Dh-K9T">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWv-xw-g8x">
+                                                    <rect key="frame" x="16" y="6" width="343" height="30"/>
+                                                    <state key="normal" title="Notifications Settings"/>
+                                                    <connections>
+                                                        <segue destination="kPp-nE-G0r" kind="show" id="yZY-DX-6Aa"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dWv-xw-g8x" firstAttribute="leading" secondItem="7F7-Dh-K9T" secondAttribute="leadingMargin" id="exD-tq-hVF"/>
+                                                <constraint firstItem="dWv-xw-g8x" firstAttribute="trailing" secondItem="7F7-Dh-K9T" secondAttribute="trailingMargin" id="mTK-Ls-blu"/>
+                                                <constraint firstItem="dWv-xw-g8x" firstAttribute="centerY" secondItem="7F7-Dh-K9T" secondAttribute="centerY" id="nWC-Ir-MOA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Custom Schedule" id="lEc-H6-yzR">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customScheduleCell" id="ppM-sE-kf5">
-                                        <rect key="frame" x="0.0" y="355.33333333333337" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="455.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ppM-sE-kf5" id="mcb-5b-6Ve">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -386,7 +412,7 @@
                             <tableViewSection headerTitle="Time" id="P4j-k4-1Gi">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeSettingCell" id="ZHq-3B-rQf">
-                                        <rect key="frame" x="0.0" y="455.33333333333337" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="555.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZHq-3B-rQf" id="5aF-WQ-yCY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -420,7 +446,7 @@
                             <tableViewSection headerTitle="Updates" id="IbO-8D-vQK">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="updatesCell" id="t9Z-ec-Rsv" userLabel="updatesCell">
-                                        <rect key="frame" x="0.0" y="555.33333333333337" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="655.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9Z-ec-Rsv" id="44A-vo-Hpt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -447,7 +473,7 @@
                             <tableViewSection headerTitle="Feedback" id="WMc-mg-pI4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedbackCell" id="ebz-zH-1FP" userLabel="feedbackCell">
-                                        <rect key="frame" x="0.0" y="655.33333333333337" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="755.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ebz-zH-1FP" id="fPd-cM-SVt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -488,6 +514,8 @@
                     <connections>
                         <outlet property="colourPickerView" destination="k1Q-pF-Hss" id="pX2-O3-VMy"/>
                         <outlet property="feedBackButton" destination="wsI-Ud-oe4" id="9VT-AZ-y3a"/>
+                        <outlet property="goToNotificationsSettings" destination="dWv-xw-g8x" id="V1J-Mu-FhV"/>
+                        <outlet property="goToPremiumSettings" destination="5IF-NN-rT5" id="GcU-Gz-C7j"/>
                         <outlet property="goToSpecialSchedule" destination="HhD-TJ-xxS" id="FXb-ko-XxS"/>
                         <outlet property="iconMatchesSwitch" destination="9Dy-j4-AeV" id="kET-Af-9eK"/>
                         <outlet property="militaryTimeSwitch" destination="INb-PH-C3s" id="7Ij-FE-e7n"/>
@@ -503,7 +531,7 @@
         <scene sceneID="eUP-hC-7DP">
             <objects>
                 <tableViewController title="Premium Settings" id="aY8-Qn-F77" userLabel="Premium Settings" customClass="PremiumSettingsTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8qC-Jz-yI5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8qC-Jz-yI5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -608,11 +636,123 @@
             </objects>
             <point key="canvasLocation" x="2214" y="697"/>
         </scene>
+        <!--Notifications Settings-->
+        <scene sceneID="ggJ-58-8Pq">
+            <objects>
+                <tableViewController title="Notifications Settings" id="kPp-nE-G0r" customClass="NotificationsSettingsTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="dcS-OB-kci">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Notifications" footerTitle="Notifications will buzz your phone before the class ends to tell you to start getting ready for your next class." id="hnP-KJ-pmy">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="45" id="yAJ-4h-nwW">
+                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yAJ-4h-nwW" id="ur8-zd-4cR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ps3-jU-tXf">
+                                                    <rect key="frame" x="16" y="7" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwd-7M-ZOw">
+                                                    <rect key="frame" x="73" y="0.0" width="302" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mwd-7M-ZOw" firstAttribute="top" secondItem="ur8-zd-4cR" secondAttribute="top" id="0e7-iP-hhZ"/>
+                                                <constraint firstItem="Mwd-7M-ZOw" firstAttribute="centerY" secondItem="ps3-jU-tXf" secondAttribute="centerY" id="SlG-vh-a5Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mwd-7M-ZOw" secondAttribute="trailing" id="Th7-tl-SXj"/>
+                                                <constraint firstItem="ps3-jU-tXf" firstAttribute="centerY" secondItem="ur8-zd-4cR" secondAttribute="centerY" id="a6l-P3-8Xn"/>
+                                                <constraint firstItem="ps3-jU-tXf" firstAttribute="leading" secondItem="ur8-zd-4cR" secondAttribute="leadingMargin" id="ag3-mb-wZw"/>
+                                                <constraint firstItem="Mwd-7M-ZOw" firstAttribute="leading" secondItem="ps3-jU-tXf" secondAttribute="trailing" constant="8" symbolic="YES" id="rXr-3X-d0B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Zero Period" footerTitle="If this switch is checked, your phone will get an alert for the end of period 0 as well." id="Hy7-3A-1pD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="45" id="Nra-ZS-6wp">
+                                        <rect key="frame" x="0.0" y="191.66666666666669" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nra-ZS-6wp" id="iLH-Uw-X8E">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7la-SD-PlT">
+                                                    <rect key="frame" x="16" y="7" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send notifications for period 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNU-sO-jGB">
+                                                    <rect key="frame" x="73" y="0.0" width="302" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hNU-sO-jGB" firstAttribute="centerY" secondItem="7la-SD-PlT" secondAttribute="centerY" id="GS2-Fw-X2e"/>
+                                                <constraint firstItem="hNU-sO-jGB" firstAttribute="top" secondItem="iLH-Uw-X8E" secondAttribute="top" id="L53-Rm-mjf"/>
+                                                <constraint firstAttribute="trailing" secondItem="hNU-sO-jGB" secondAttribute="trailing" id="MNo-4c-olO"/>
+                                                <constraint firstItem="7la-SD-PlT" firstAttribute="leading" secondItem="iLH-Uw-X8E" secondAttribute="leadingMargin" id="W5v-zG-Rae"/>
+                                                <constraint firstItem="hNU-sO-jGB" firstAttribute="leading" secondItem="7la-SD-PlT" secondAttribute="trailing" constant="8" symbolic="YES" id="sMQ-Vo-hya"/>
+                                                <constraint firstItem="7la-SD-PlT" firstAttribute="centerY" secondItem="iLH-Uw-X8E" secondAttribute="centerY" id="uZ0-Pl-NcN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Warning" footerTitle="This segment chooses how much time there is between the notification and the end of the class." id="sQp-3p-huM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cvl-Eg-RU8">
+                                        <rect key="frame" x="0.0" y="328" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvl-Eg-RU8" id="ieI-UB-soR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-dQ-FRv">
+                                                    <rect key="frame" x="16" y="8" width="343" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segments>
+                                                        <segment title="0"/>
+                                                        <segment title="1 min"/>
+                                                        <segment title="2 min"/>
+                                                        <segment title="4 min"/>
+                                                        <segment title="5 min"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="kPp-nE-G0r" id="EeN-Kg-kwd"/>
+                            <outlet property="delegate" destination="kPp-nE-G0r" id="jyQ-SA-nNP"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="sendNotificationsSwitch" destination="ps3-jU-tXf" id="fdj-mH-78M"/>
+                        <outlet property="warningSegment" destination="8WR-dQ-FRv" id="cRT-ZO-JJa"/>
+                        <outlet property="zeroPeriodSwitch" destination="7la-SD-PlT" id="bv6-G1-JZF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Lk-fK-dqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3204" y="696.79802955665025"/>
+        </scene>
         <!--Custom Schedule-->
         <scene sceneID="32P-cS-Gs8">
             <objects>
                 <tableViewController title="Custom Schedule" id="6lt-VE-lzc" customClass="CustomScheduleTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Z1Z-vR-8vg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Z1Z-vR-8vg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

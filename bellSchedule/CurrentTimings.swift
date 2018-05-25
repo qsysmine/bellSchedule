@@ -9,15 +9,15 @@
 import Foundation
 public class CurrentTimings {
 	public var currentTimings:[(String, String, String)];
-	public init() {
-		let dayOfTheWeek = Today().weekday;
-		let dateString = Today().dateString;
-		if(SpecialTimings.getSpecialTimings() != nil) {
-			currentTimings = SpecialTimings.getSpecialTimings() ?? [(String, String, String)]();
+	public init(_ date: Date) {
+		let dayOfTheWeek = Today(date).weekday;
+		let dateString = Today(date).dateString;
+		if(SpecialTimings.getSpecialTimings(for: date) != nil) {
+			currentTimings = SpecialTimings.getSpecialTimings(for: date) ?? [(String, String, String)]();
 			return;
 		}
 		/*DAYS OFF 2018 [*/
-		if(dateString == "15 JAN 2018") {
+		if(dateString == "28 MAY 2018") {
 			currentTimings = [];
 		} else
 		/*] END DAYS OFF 2018*/

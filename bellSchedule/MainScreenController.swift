@@ -22,7 +22,7 @@ class MainScreenController: UIViewController {
 	
 	@objc func populateFields() {
 		let customSchedule = Settings.getCustomSchedule();
-		let currentTimings = CurrentTimings().currentTimings;
+		let currentTimings = CurrentTimings(Date()).currentTimings;
 		let currentPeriod = CurrentPeriod();
 		if(currentPeriod.isCurrentPeriod) {
 			let periodOffset = currentPeriod.periodOffset;
@@ -58,8 +58,12 @@ class MainScreenController: UIViewController {
 			}
 		});
 		populateFields()
-		SpecialTimings.lazyCheckForSpecialTimings { (areSpecialTimings, error) in
-			DispatchQueue.main.async {self.populateFields()}
+		SpecialTimings.lazyCheckForSpecialTimings(for: Date()) { (areSpecialTimings, error) in
+			DispatchQueue.main.async {
+				self.populateFields()
+				LocalNotifications.clearNotifications();
+				LocalNotifications.registerNotificationsForWeek(after: Date());
+			}
 		}
 	}
 	
