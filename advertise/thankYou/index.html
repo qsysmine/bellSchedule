@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="../res/css/style.css">
+  <title>Thank You — Advertise with the DHS Bell Schedule App</title>
+</head>
+
+<body>
+  <h1>Thank You!</h1>
+  <h2>Your advertisement application has been recorded.</h2>
+  <p>You should receive an email response within 12 hours regarding your applcation. Your reference number is <b id="adReferenceNumber"></b></p>
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  var getQueryVariable = function(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      if (decodeURIComponent(pair[0]) == variable) {
+        return decodeURIComponent(pair[1]);
+      }
+    }
+    return null;
+  };
+  (function() {
+    var config = {
+      apiKey: "AIzaSyD1fFhbnM4-GiEp1Jf1gDwU1gJyC2I6MSU",
+      authDomain: "bellschedule-6db93.firebaseapp.com",
+      databaseURL: "https://bellschedule-6db93.firebaseio.com",
+      projectId: "bellschedule-6db93",
+      storageBucket: "bellschedule-6db93.appspot.com",
+      messagingSenderId: "581204545131"
+    };
+
+    firebase.initializeApp(config);
+
+    firebase.auth().signInAnonymously().then(function() {
+      var referenceNumberToCheck = getQueryVariable("referenceNumber");
+      if(referenceNumberToCheck == null) {
+        return alert("Error: Your reference number could not be found. Sorry!");
+      }
+      firebase.database().ref("adApplications").child(referenceNumberToCheck).once("value").then(function(e) {
+        if(e.exists()) {
+          document.getElementById("adReferenceNumber").innerText = referenceNumberToCheck;
+        } else {
+          return alert("Error: Your reference number could not be found. Sorry!");
+        }
+      });
+    }).catch(function(error) {});
+  })();
+
+</script>
+
+</html>
