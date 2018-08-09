@@ -54,6 +54,7 @@ body {
   font-size:1.25em;
   border-radius:5em;
   font-weight:bold;
+  -webkit-appearance:none;
 }
 .adTypeButton {
   display:block;
