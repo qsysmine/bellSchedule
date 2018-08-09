@@ -45,7 +45,9 @@ var getQueryVariable = function(variable) {
 
   firebase.initializeApp(config);
 
-  firebase.auth().signInAnonymously().catch(function(error) {
+  firebase.auth().signInAnonymously().then(function() {
+    renderCalculatedPrice(calculatePrice());
+  }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
