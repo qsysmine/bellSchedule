@@ -119,8 +119,12 @@ textarea, input[type="text"], input[type="url"], input[type="email"], div.checkb
   align-items: center;
   font-size:1.25em;
   padding:1em;
+}
+
+textarea, input[type="text"], input[type="url"], input[type="email"] {
   border: 1px solid #000;
 }
+
 label {
   flex:1;
   padding:1em;
