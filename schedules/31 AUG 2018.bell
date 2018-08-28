@@ -2,23 +2,21 @@
 ==
 "07:00","07:44","$(per0)";
 "07:44","08:00","Passing Period";
-"08:00","08:45","$(per1)";
-"08:45","08:50","Passing Period";
-"08:50","08:55","$(per2)";
-"08:55","09:00","Passing Period";
-"09:00","09:45","Rally in Sports Complex";
-"09:45","09:50","Passing Period";
-"09:50","10:35","$(per2)";
-"10:35","10:40","Passing Period";
-"10:40","11:25","$(per3)";
-"11:25","11:30","Passing Period";
-"11:30","12:15","$(per4)";
-"12:14","12:57","Lunch";
-"12:57","13:02","Passing Period";
-"13:02","13:47","$(per5)";
-"13:47","14:02","Passing Period";
-"14:02","14:37","$(per6)";
-"14:37","14:42","Passing Period";
-"14:42","15:27","$(per7)"
+"08:00","08:46","$(per1)";
+"08:46","08:51","Passing Period";
+"08:51","09:42","$(per2)";
+"09:42","09:47","Passing Period";
+"09:47","10:33","$(per3)";
+"10:33","10:38","Passing Period";
+"10:38","11:24","$(per4)";
+"11:24","11:29","Passing Period";
+"11:29","12:13","Rally in Sports Complex";
+"12:13","12:54","Lunch";
+"12:54","12:59","Passing Period";
+"12:59","13:45","$(per5)";
+"13:45","13:50","Passing Period";
+"13:50","14:36","$(per6)";
+"14:36","14:41","Passing Period";
+"14:41","15:27","$(per7)"
 ==
 "Mr. Kleinow is the greatest teacher in the world.","business","https://docs.google.com/document/d/17iYdW8gnkfyP7TeFrng_GsP6lHPSVEZS4fAGk71r-qE/edit?usp=sharing","Learn More"
