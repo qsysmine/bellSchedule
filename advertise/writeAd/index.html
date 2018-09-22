@@ -18,20 +18,21 @@
 <body>
   <form id="bellScheduleForm" action=".">
     <h1>Write Your Ad</h1>
-    <div id="userInfoPanel">
+    <div id="userInfoPanel" class="formPanel">
       <h2>Your Name &amp; Email (Required)</h2>
       <p>You will receive your invoice through email.</p>
 
       <div class="row">
         <div class="col bumper"></div>
         <div class="col flex1">
-          <div class="inputRow"><label for="nameField">Your name</label><input type="text" id="nameField" required></div>
-          <div class="inputRow"><label for="emailField">Your email</label><input type="email" id="emailField" required></div>
+          <div class="inputRow"><label for="nameField">Your name</label><input type="text" id="nameField"></div>
+          <div class="inputRow"><label for="emailField">Your email</label><input type="email" id="emailField"></div>
         </div>
         <div class="col bumper"></div>
       </div>
     </div>
-    <div id="datePanel">
+
+    <div id="datePanel" class="formPanel">
       <h2>Dates (Required)</h2>
       <p>The ad will appear on the app for 24 hours on the date or dates of your choosing.</p>
       <div class="row">
@@ -42,32 +43,35 @@
         <div class="col bumper"></div>
       </div>
     </div>
-    <div id="pitchPanel">
-      <h2>Pitch (Required)</h2>
-      <p>Write the pitch statement for your ad. This should be no longer than a couple sentences.</p>
+
+    <div id="pitchPanel" class="formPanel">
+      <h2>Ad Text (Required)</h2>
+      <p>Write your ad. This should be no longer than a couple sentences.</p>
       <div class="row">
         <div class="col bumper"></div>
-        <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis imperdiet lorem id mollis." id="adPitch" cols="30" rows="3" class="col flex1"></textarea>
+        <textarea placeholder="Write your ad here." id="adPitch" cols="30" rows="3" class="col flex1"></textarea>
         <div class="col bumper"></div>
       </div>
     </div>
-    <div id="ctaPanel">
-      <h2>Button Text and URL (Optional)</h2>
+
+    <div id="ctaPanel" class="formPanel">
+      <h2>Button (Optional)</h2>
       <p>If you enter text below, a button will be displayed on screen that goes to the website of your choice. Adding this option is <b>$0.50 per day</b>.</p>
       <div class="row">
         <div class="col bumper"></div>
         <div class="col flex1">
           <div class="inputRow">
-            <label for="adCTAText">Button Text</label><input id="adCTAText" type="text">
+            <label for="adCTAText">Button Text</label><input id="adCTAText" type="text" placeholder="Learn More">
           </div>
           <div class="inputRow">
-            <label for="adURL">Web Address</label><input type="url" id="adURL" placeholder="https://...">
+            <label for="adURL">Link URL</label><input type="text" id="adURL" placeholder="https://...">
           </div>
         </div>
         <div class="col bumper"></div>
       </div>
     </div>
-    <div id="birthdayPanel">
+
+    <div id="birthdayPanel" class="formPanel">
       <h2>Student Name</h2>
       <div class="row">
         <div class="col bumper"></div>
@@ -89,7 +93,8 @@
         </div>
       </div>
     </div>
-    <div id="submitPanel">
+
+    <div id="submitPanel" class="formPanel">
       <h2>Price Estimate</h2>
       <p>This is just an estimate of how much this ad will cost. This is not a final price.</p>
       <div class="row">

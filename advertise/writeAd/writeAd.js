@@ -105,11 +105,11 @@ var getQueryVariable = function(variable) {
 
     var numberOfDates = selectedDates.length;
 
-    var adTypeCost = ["Advertisement base rate x " + numberOfDates + " days", 300 * numberOfDates];
+    var adTypeCost = ["Advertisement base rate (" + renderPrice(300) + " / day) x " + numberOfDates + " days", 300 * numberOfDates];
     if (adType == "birthday") {
-      adTypeCost = ["Advertisement birthday rate x " + numberOfDates + " days", 250 * numberOfDates];
+      adTypeCost = ["Advertisement birthday rate (" + renderPrice(250) + " / day) x " + numberOfDates + " days", 250 * numberOfDates];
     } else if (adType == "club") {
-      adTypeCost = ["Advertisement club rate x " + numberOfDates + " days", 200 * numberOfDates];
+      adTypeCost = ["Advertisement club rate (" + renderPrice(200) + " / day ) x " + numberOfDates + " days", 200 * numberOfDates];
     }
 
     costComponents.push(adTypeCost);
@@ -121,7 +121,7 @@ var getQueryVariable = function(variable) {
       costComponents.push(birthdayWishCost);
     }
 
-    var hasCTA = $('#adCTAText').val().trim() != "" || $('#adURL').val().trim() != "",
+    var hasCTA = !($('#adURL').val().trim() == ""),
       ctaCost = ["Call to action button x " + numberOfDates + " days", 50 * numberOfDates];
 
     if (hasCTA) {
@@ -159,18 +159,37 @@ var getQueryVariable = function(variable) {
     $('#submitButton').attr("disabled", "true");
     var email = $('#emailField').val(),
       name = $('#nameField').val(),
-      ctaText = $('#adCTAText').val(),
+      ctaText = ($('#adCTAText').val().trim() == "" ? "Learn more" : $('#adCTAText').val().trim() == ""),
       adPitch = $('#adPitch').val(),
       studentName = $('#adBirthdayName').val(),
       birthdayWishes = $('#adBirthdayWishes')[0].checked,
       url = $('#adURL').val(),
-      dates = selectedDates;
+      dates = selectedDates.filter(function(date) {return date != ""});
 
-    if (dates == [] || email.trim() == "" || name.trim() == "" || ((adType == "birthday" && studentName.trim() == "") || (adType != "birthday" && adPitch.trim() == "")) || (url.trim() == "") != (ctaText.trim() == "") || !(grecaptcha &&
-        grecaptcha.getResponse().length != 0)) {
+      console.log(dates);
+    if (dates.length == 0 ||
+      email.trim() == "" ||
+      name.trim() == "" ||
+      ((adType == "birthday" && studentName.trim() == "") ||
+      (adType != "birthday" && adPitch.trim() == "")) ||
+      !(grecaptcha && grecaptcha.getResponse().length != 0)) {
       $('#submitButton').removeAttr("disabled");
+      if(name.trim() == "") {
+        return alert("You've not given us your name.");
+      } else if(email.trim() == "") {
+        return alert("You have not provided an email.");
+      } else if(dates.length == 0) {
+        return alert("You have not selected any dates.");
+      } else  if(adType == "birthday" && studentName.trim() == "") {
+        return alert("You need to provide us your student's name.");
+      } else if(adType != "birthday" && adPitch.trim() == "") {
+        return alert("You need to provide ad text for us to make your ad.");
+      } else if(!(grecaptcha && grecaptcha.getResponse().length != 0)) {
+        return alert("We need you to fill out the captcha before submitting.");
+      }
       return alert("Something's not right.");
     }
+
     getTimestamp().then(function(timestamp) {
       var key = Math.floor(new Date().getTime() / 1000);
       firebase.database().ref("adApplications").child(key).set({
@@ -179,7 +198,7 @@ var getQueryVariable = function(variable) {
         dates: dates,
         adType: adType,
         adPitch: (adType == "birthday" ? "Happy birthday " + studentName + "!" : adPitch),
-        ctaText: (ctaText.trim() == "" ? null : ctaText.trim()),
+        ctaText: (url.trim() == "" ? null : ctaText),
         ctaURL: (url.trim() == "" ? null : url.trim()),
         birthdayWishes: (adType == "birthday" ? birthdayWishes : null),
         timestamp: timestamp,
