@@ -1,0 +1,8 @@
+21 DEC 2018
+==
+"08:00","10:00","$(per2) Final";
+"10:00","10:15","Break";
+"10:15","10:20","Passing Period";
+"10:20","12:20","$(per1) Final";
+==
+"No zero period today! It's the home stretch!","school"
