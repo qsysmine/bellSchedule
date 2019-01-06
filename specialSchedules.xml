@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bellSchedule>
 	<specialSchedule date="14 DEC 2018">
-		&
 		<classPeriod symbol="per0" start="07:00" end="07:51"/>
 		<passingPeriod start="07:51" len="9"/>
 		<classPeriod symbol="per1" start="08:00" end="08:51"/>
