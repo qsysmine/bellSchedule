@@ -2,5 +2,5 @@
 <bellSchedule>
 	<advertisement dates="14 DEC 2018, 15 DEC 2018, 16 DEC 2018" text="Sample ad" url="http://google.com" cta="Google" type="school"/>
 	<advertisement dates="15 DEC 2018, 16 DEC 2018, 17 DEC 2018" text="Sample ad" type="school"/>
-
+	<advertisement dates="07 JAN 2019" text="Sample ad" type="school"/>
 </bellSchedule>
