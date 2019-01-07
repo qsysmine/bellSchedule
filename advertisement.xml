@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bellSchedule>
+	<advertisement dates="14 DEC 2018,15 DEC 2018,16 DEC 2018" text="Sample ad" url="http://google.com" cta="Google" type="school">
+  <advertisement dates="15 DEC 2018,16 DEC 2018,7 DEC 2018" text="Sample ad" type="school">
+
+</bellSchedule>
