@@ -56,4 +56,23 @@
 		<classPeriod symbol="per7" start="14:31" end="15:27"/>
 		<classPeriod label="$(per0) example of label with embedded symbol" start="15:27" end="23:59"/>
 	</specialSchedule>
+	<specialSchedule date="13 JAN 2019">
+		<classPeriod symbol="per0" start="07:00" end="07:51"/>
+		<passingPeriod start="07:51" len="9"/>
+		<classPeriod symbol="per1" start="08:00" end="08:51"/>
+		<passingPeriod start="08:51" len="5"/>
+		<classPeriod symbol="per2" start="08:56" end="09:51"/>
+		<passingPeriod start="09:51" len="5"/>
+		<classPeriod symbol="per3" start="09:56" end="10:47"/>
+		<passingPeriod start="10:47" len="5"/>
+		<classPeriod symbol="per4" start="10:47" end="11:43"/>
+		<classPeriod label="Lunch" start="11:43" end="12:39"/>
+		<passingPeriod start="12:39" len="5"/>
+		<classPeriod symbol="per5" start="12:44" end="13:35"/>
+		<passingPeriod start="13:35" len="5"/>
+		<classPeriod symbol="per6" start="13:40" end="14:31"/>
+		<passingPeriod start="14:31" len="5"/>
+		<classPeriod symbol="per7" start="14:31" end="15:27"/>
+		<classPeriod label="$(per0) example of label with embedded symbol" start="15:27" end="23:59"/>
+	</specialSchedule>
 </bellSchedule>
