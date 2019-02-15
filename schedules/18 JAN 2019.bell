@@ -1,24 +1,20 @@
 18 JAN 2019
 ==
-"07:00","07:50","$(per0)";
-"07:50","08:00","Passing Period";
-"08:00","08:41","$(per1)";
-"08:41","08:46","Passing Period";
-"08:46","09:27","$(per2)";
-"09:27","09:32","Passing Period";
-"09:32","10:14","$(per3)";
-"10:14","10:23","Passing Period";
-"10:23","11:03","Assembly 1: Listen to teacher instructions";
-"11:03","11:13","Passing Period";
-"11:13","11:52","Assembly 2: Listen to teacher instructions";
-"11:52","11:57","Passing Period";
-"11:57","12:38","$(per4)";
-"12:38","13:09","Lunch";
-"13:09","13:14","Passing Period";
-"13:14","13:55","$(per5)";
-"13:55","14:00","Passing Period";
-"14:00","14:41","$(per6)";
-"14:41","14:46","Passing Period";
-"14:46","15:27","$(per7)"
-==
-"Apologies for any schedule confusion. Please advise the administration to publish the correct schedule to the school website in the future.","school"
+"07:00","07:44","$(per0)";
+"07:44","08:00","Passing Period";
+"08:00","08:46","$(per1)";
+"08:46","08:51","Passing Period";
+"08:51","09:42","$(per2)";
+"09:42","09:47","Passing Period";
+"09:47","10:33","$(per3)";
+"10:33","10:38","Passing Period";
+"10:38","11:24","$(per4)";
+"11:24","11:29","Passing Period";
+"11:29","12:13","Rally in Sports Complex";
+"12:13","12:54","Lunch";
+"12:54","12:59","Passing Period";
+"12:59","13:45","$(per5)";
+"13:45","13:50","Passing Period";
+"13:50","14:36","$(per6)";
+"14:36","14:41","Passing Period";
+"14:41","15:27","$(per7)"
