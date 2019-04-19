@@ -62,8 +62,8 @@
 		88F73A4F1FB9FCE8006F3931 /* CustomSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F73A4E1FB9FCE8006F3931 /* CustomSchedule.swift */; };
 		88FB10521FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */; };
 		88FB10551FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */; };
+		8936B436226A92BA003F8E14 /* WeirdDaysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936B435226A92BA003F8E14 /* WeirdDaysTableViewController.swift */; };
 		89D82D9A22694CA30060DCF4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D82D9922694CA30060DCF4 /* logo.png */; };
-		89D82D9C22694D5C0060DCF4 /* SF Pro in Resources */ = {isa = PBXBuildFile; fileRef = 89D82D9B22694D5C0060DCF4 /* SF Pro */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,8 +168,8 @@
 		88F73A4E1FB9FCE8006F3931 /* CustomSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchedule.swift; sourceTree = "<group>"; };
 		88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchedulePeriodTableViewCell.swift; sourceTree = "<group>"; };
 		88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScheduleTableViewController.swift; sourceTree = "<group>"; };
+		8936B435226A92BA003F8E14 /* WeirdDaysTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdDaysTableViewController.swift; sourceTree = "<group>"; };
 		89D82D9922694CA30060DCF4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../Downloads/logo.png; sourceTree = "<group>"; };
-		89D82D9B22694D5C0060DCF4 /* SF Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SF Pro"; path = "../../../../Volumes/SF-Font/SF Pro"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,7 +274,6 @@
 				883794F11F2E210800C6A495 /* AppIconBlue@2x.png */,
 				883794F21F2E210800C6A495 /* AppIconBlue@3x.png */,
 				89D82D9922694CA30060DCF4 /* logo.png */,
-				89D82D9B22694D5C0060DCF4 /* SF Pro */,
 			);
 			name = res;
 			sourceTree = "<group>";
@@ -344,6 +343,7 @@
 		88BC43D31D5FD1DB00FFBDEF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8936B435226A92BA003F8E14 /* WeirdDaysTableViewController.swift */,
 				88DB21C41FE6CA9900EC5816 /* PremiumPromoView.swift */,
 				88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */,
 				88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */,
@@ -534,7 +534,6 @@
 				885B67A21FBDDCCE006F64F1 /* AppIconSilver@2x.png in Resources */,
 				885B679F1FBDDCC1006F64F1 /* AppIconWhite@2x.png in Resources */,
 				88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */,
-				89D82D9C22694D5C0060DCF4 /* SF Pro in Resources */,
 				885B679E1FBDDCC1006F64F1 /* AppIconWhite@3x.png in Resources */,
 				883794F51F2E210800C6A495 /* AppIconBlue@3x.png in Resources */,
 				883794FB1F2E211000C6A495 /* AppIconRed@3x.png in Resources */,
@@ -584,6 +583,7 @@
 				881FF0011D60D6B3003AC1AC /* AllSchedulesTableTableViewController.swift in Sources */,
 				8876788C201E2000004EA0B0 /* NotificationsSettingsTableViewController.swift in Sources */,
 				8816BBE11FBD16D20030A91A /* IAPHelper.swift in Sources */,
+				8936B436226A92BA003F8E14 /* WeirdDaysTableViewController.swift in Sources */,
 				88BC2A701D5FF42E000AEE52 /* MainScreenController.swift in Sources */,
 				881FEFFF1D60D0F3003AC1AC /* StylisedNavigationController.swift in Sources */,
 				88BC439F1D5FCF5400FFBDEF /* AppDelegate.swift in Sources */,

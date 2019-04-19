@@ -17,6 +17,9 @@ class MainScreenController: UIViewController {
 	@IBOutlet weak var currentClassText: UILabel!
 	@IBOutlet var settingsButton: UIButton!;
 	@IBOutlet var infoButton: UIButton!;
+	@IBAction func weirdDays(_ sender: UIButton) {
+		self.performSegue(withIdentifier: "weirdDaysSegue", sender: self)
+	}
 	@IBOutlet weak var promoView: PremiumPromoView?;
 	var isGoingToPremiumSettings: Bool = false;
 	

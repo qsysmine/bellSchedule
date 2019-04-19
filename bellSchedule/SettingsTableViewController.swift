@@ -22,6 +22,7 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 	@IBOutlet var goToSpecialSchedule: UIButton!;
 	@IBOutlet var goToPremiumSettings: UIButton!;
     @IBOutlet var goToNotificationsSettings: UIButton!;
+	
 	var isGoingToPremiumSettings: Bool = false;
 		
 	var colourData: [(String, ColourSettingType)] = [("Blue",.blue), ("Red",.red), ("Black",.black)];

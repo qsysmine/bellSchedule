@@ -109,6 +109,14 @@
                                     <outlet property="textLabel" destination="Wd8-ii-KnQ" id="cLY-ya-wLW"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFp-3w-CTB">
+                                <rect key="frame" x="155" y="582" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="weirdDays:" destination="fWv-pW-tOY" eventType="touchUpInside" id="Ahe-SX-8rb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.086274509803921567" green="0.25882352941176467" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,6 +150,7 @@
                         <outlet property="promoView" destination="Wqr-RV-ycw" id="06w-Ks-66h"/>
                         <outlet property="settingsButton" destination="6rv-3q-DNF" id="VoT-GU-gaw"/>
                         <outlet property="startText" destination="WNy-Lk-B0Z" id="Iwq-Gg-2JL"/>
+                        <segue destination="s02-fq-FaV" kind="presentation" identifier="weirdDaysSegue" id="kGg-o9-K9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ch-Ir-mHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,7 +286,7 @@
                             <tableViewSection headerTitle="Premium" id="ynN-6M-yyl" userLabel="Premium">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedbackCell" id="mss-Yx-O8k" userLabel="feedbackCell">
-                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mss-Yx-O8k" id="Ckb-Rx-aIS">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -785,6 +794,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWX-h0-95K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1249" y="1421"/>
+        </scene>
+        <!--Weird Days Table View Controller-->
+        <scene sceneID="hMl-ka-cyd">
+            <objects>
+                <tableViewController id="s02-fq-FaV" customClass="WeirdDaysTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2v4-rI-XMS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HrB-vx-uLK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HrB-vx-uLK" id="Z7n-sM-uMj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="s02-fq-FaV" id="j3W-0e-Z7J"/>
+                            <outlet property="delegate" destination="s02-fq-FaV" id="AzN-Ne-T2U"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dW-T7-vre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="697"/>
         </scene>
         <!--Stylised Navigation Controller-->
         <scene sceneID="Dyw-gK-YlV">
