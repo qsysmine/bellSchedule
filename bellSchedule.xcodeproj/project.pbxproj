@@ -62,6 +62,8 @@
 		88F73A4F1FB9FCE8006F3931 /* CustomSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F73A4E1FB9FCE8006F3931 /* CustomSchedule.swift */; };
 		88FB10521FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */; };
 		88FB10551FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */; };
+		89D82D9A22694CA30060DCF4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D82D9922694CA30060DCF4 /* logo.png */; };
+		89D82D9C22694D5C0060DCF4 /* SF Pro in Resources */ = {isa = PBXBuildFile; fileRef = 89D82D9B22694D5C0060DCF4 /* SF Pro */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,8 @@
 		88F73A4E1FB9FCE8006F3931 /* CustomSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchedule.swift; sourceTree = "<group>"; };
 		88FB10511FBA1E6D00AB2610 /* CustomSchedulePeriodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchedulePeriodTableViewCell.swift; sourceTree = "<group>"; };
 		88FB10541FBA1EDF00AB2610 /* CustomScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScheduleTableViewController.swift; sourceTree = "<group>"; };
+		89D82D9922694CA30060DCF4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../Downloads/logo.png; sourceTree = "<group>"; };
+		89D82D9B22694D5C0060DCF4 /* SF Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SF Pro"; path = "../../../../Volumes/SF-Font/SF Pro"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +273,8 @@
 				883794F81F2E211000C6A495 /* AppIconRed@3x.png */,
 				883794F11F2E210800C6A495 /* AppIconBlue@2x.png */,
 				883794F21F2E210800C6A495 /* AppIconBlue@3x.png */,
+				89D82D9922694CA30060DCF4 /* logo.png */,
+				89D82D9B22694D5C0060DCF4 /* SF Pro */,
 			);
 			name = res;
 			sourceTree = "<group>";
@@ -522,11 +528,13 @@
 				88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */,
 				883794F91F2E211000C6A495 /* AppIconRed@2x.png in Resources */,
 				885B67AB1FBDDDCE006F64F1 /* AppIconGold@2x.png in Resources */,
+				89D82D9A22694CA30060DCF4 /* logo.png in Resources */,
 				883794F31F2E210800C6A495 /* AppIconBlue@2x.png in Resources */,
 				885B67A31FBDDCCE006F64F1 /* AppIconSilver@3x.png in Resources */,
 				885B67A21FBDDCCE006F64F1 /* AppIconSilver@2x.png in Resources */,
 				885B679F1FBDDCC1006F64F1 /* AppIconWhite@2x.png in Resources */,
 				88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */,
+				89D82D9C22694D5C0060DCF4 /* SF Pro in Resources */,
 				885B679E1FBDDCC1006F64F1 /* AppIconWhite@3x.png in Resources */,
 				883794F51F2E210800C6A495 /* AppIconBlue@3x.png in Resources */,
 				883794FB1F2E211000C6A495 /* AppIconRed@3x.png in Resources */,
