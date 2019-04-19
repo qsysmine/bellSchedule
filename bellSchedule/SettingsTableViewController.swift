@@ -17,13 +17,13 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 	@IBOutlet weak var militaryTimeSwitch: UISwitch!;
 	@IBOutlet weak var colourPickerView: UIPickerView!;
     @IBOutlet var iconMatchesSwitch: UISwitch!;
-    @IBOutlet var feedBackButton: UIButton!
-    @IBOutlet var updatesButton: UIButton!
+	@IBOutlet var feedBackButton: UIButton!;
+	@IBOutlet var updatesButton: UIButton!;
 	@IBOutlet var goToSpecialSchedule: UIButton!;
 	@IBOutlet var goToPremiumSettings: UIButton!;
     @IBOutlet var goToNotificationsSettings: UIButton!;
 	var isGoingToPremiumSettings: Bool = false;
-    
+		
 	var colourData: [(String, ColourSettingType)] = [("Blue",.blue), ("Red",.red), ("Black",.black)];
 	let premiumColourData: [(String, ColourSettingType)] = [("Blue",.blue), ("Red",.red), ("Black",.black), ("Gold",.gold), ("Silver",.silver), ("White",.white)];
 	
@@ -160,7 +160,7 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 			let OKAction = UIAlertAction(title: "You're welcome", style: .default) { _ in }
 			alertController.addAction(OKAction)
 			return self.present(alertController, animated: true) {}
-		@unknown default: break
+		
 			// something goes here I really don't know what this function does
 			// - Shreyas
 		}

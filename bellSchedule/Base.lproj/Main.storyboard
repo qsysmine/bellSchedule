@@ -277,7 +277,7 @@
                             <tableViewSection headerTitle="Premium" id="ynN-6M-yyl" userLabel="Premium">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedbackCell" id="mss-Yx-O8k" userLabel="feedbackCell">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mss-Yx-O8k" id="Ckb-Rx-aIS">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
