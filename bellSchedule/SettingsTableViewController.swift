@@ -62,8 +62,8 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 		if(!ProcessInfo.processInfo.isOperatingSystemAtLeast(OperatingSystemVersion(majorVersion: 10, minorVersion: 3, patchVersion: 0))) {
 			iconMatchesSwitch.isEnabled = false
 		}
-		colourPickerView.selectRow(colourData.index(where:{$0.1 == colourType}) ?? 0, inComponent: 0, animated: false);
-		if(colourData.index(where:{$0.1 == colourType}) == nil) {
+		colourPickerView.selectRow(colourData.firstIndex(where:{$0.1 == colourType}) ?? 0, inComponent: 0, animated: false);
+		if(colourData.firstIndex(where:{$0.1 == colourType}) == nil) {
 			Settings.setColourType(type: .blue);
 		}
 		colourData = (Settings.hasPremium() ? premiumColourData : colourData);
@@ -160,6 +160,9 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
 			let OKAction = UIAlertAction(title: "You're welcome", style: .default) { _ in }
 			alertController.addAction(OKAction)
 			return self.present(alertController, animated: true) {}
+		@unknown default: break
+			// something goes here I really don't know what this function does
+			// - Shreyas
 		}
 	}
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
