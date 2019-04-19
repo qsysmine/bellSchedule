@@ -81,7 +81,7 @@ class MainScreenController: UIViewController {
 				Settings.hasSeenPromo();
 			}
 		}
-		RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+		RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
 		timer.fire();
 		// Do any additional setup after loading the view.
 	}

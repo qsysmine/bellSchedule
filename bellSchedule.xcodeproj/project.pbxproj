@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		88039FE61F2E256D006BCB89 /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88039FE51F2E256D006BCB89 /* Colour.swift */; };
-		88039FEE1F2E2D6F006BCB89 /* AppIconBlack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */; };
-		88039FEF1F2E2D6F006BCB89 /* AppIconBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */; };
 		88039FF21F2E3317006BCB89 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88039FF11F2E3317006BCB89 /* StoreKit.framework */; };
 		8816BBE11FBD16D20030A91A /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816BBE01FBD16D20030A91A /* IAPHelper.swift */; };
 		8817AA261F5E00660074E852 /* mondayTuesdayThursday.bell in Resources */ = {isa = PBXBuildFile; fileRef = 88D4F9211F5D8F4B004E30D2 /* mondayTuesdayThursday.bell */; };
@@ -42,8 +40,6 @@
 		885B679F1FBDDCC1006F64F1 /* AppIconWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B679D1FBDDCC1006F64F1 /* AppIconWhite@2x.png */; };
 		885B67A21FBDDCCE006F64F1 /* AppIconSilver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A01FBDDCCE006F64F1 /* AppIconSilver@2x.png */; };
 		885B67A31FBDDCCE006F64F1 /* AppIconSilver@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A11FBDDCCE006F64F1 /* AppIconSilver@3x.png */; };
-		885B67A61FBDDCDA006F64F1 /* AppIconWhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A41FBDDCDA006F64F1 /* AppIconWhite@3x.png */; };
-		885B67A71FBDDCDA006F64F1 /* AppIconWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A51FBDDCDA006F64F1 /* AppIconWhite@2x.png */; };
 		885B67AA1FBDDDCE006F64F1 /* AppIconGold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A81FBDDDCE006F64F1 /* AppIconGold@3x.png */; };
 		885B67AB1FBDDDCE006F64F1 /* AppIconGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 885B67A91FBDDDCE006F64F1 /* AppIconGold@2x.png */; };
 		8876788C201E2000004EA0B0 /* NotificationsSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876788B201E2000004EA0B0 /* NotificationsSettingsTableViewController.swift */; };
@@ -112,8 +108,6 @@
 
 /* Begin PBXFileReference section */
 		88039FE51F2E256D006BCB89 /* Colour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colour.swift; sourceTree = "<group>"; };
-		88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconBlack@3x.png"; path = "../../icons/nuBellSchedule/black/AppIconBlack@3x.png"; sourceTree = "<group>"; };
-		88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconBlack@2x.png"; path = "../../icons/nuBellSchedule/black/AppIconBlack@2x.png"; sourceTree = "<group>"; };
 		88039FF11F2E3317006BCB89 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		881342FB1E50E36E00B0FBA8 /* bellSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bellSchedule.entitlements; sourceTree = "<group>"; };
 		881342FC1E50E3AB00B0FBA8 /* BellScheduleWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BellScheduleWidget.entitlements; sourceTree = "<group>"; };
@@ -139,8 +133,6 @@
 		885B679D1FBDDCC1006F64F1 /* AppIconWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconWhite@2x.png"; sourceTree = "<group>"; };
 		885B67A01FBDDCCE006F64F1 /* AppIconSilver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconSilver@2x.png"; sourceTree = "<group>"; };
 		885B67A11FBDDCCE006F64F1 /* AppIconSilver@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconSilver@3x.png"; sourceTree = "<group>"; };
-		885B67A41FBDDCDA006F64F1 /* AppIconWhite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconWhite@3x.png"; path = "../../icons/nuBellSchedule/white/AppIconWhite@3x.png"; sourceTree = "<group>"; };
-		885B67A51FBDDCDA006F64F1 /* AppIconWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIconWhite@2x.png"; path = "../../icons/nuBellSchedule/white/AppIconWhite@2x.png"; sourceTree = "<group>"; };
 		885B67A81FBDDDCE006F64F1 /* AppIconGold@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconGold@3x.png"; sourceTree = "<group>"; };
 		885B67A91FBDDDCE006F64F1 /* AppIconGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconGold@2x.png"; sourceTree = "<group>"; };
 		8876788B201E2000004EA0B0 /* NotificationsSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsSettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -268,13 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				885B679D1FBDDCC1006F64F1 /* AppIconWhite@2x.png */,
-				885B67A51FBDDCDA006F64F1 /* AppIconWhite@2x.png */,
 				885B679C1FBDDCC1006F64F1 /* AppIconWhite@3x.png */,
 				885B67A01FBDDCCE006F64F1 /* AppIconSilver@2x.png */,
 				885B67A11FBDDCCE006F64F1 /* AppIconSilver@3x.png */,
-				88039FEC1F2E2D6F006BCB89 /* AppIconBlack@2x.png */,
-				885B67A41FBDDCDA006F64F1 /* AppIconWhite@3x.png */,
-				88039FEB1F2E2D6F006BCB89 /* AppIconBlack@3x.png */,
 				885B67A91FBDDDCE006F64F1 /* AppIconGold@2x.png */,
 				885B67A81FBDDDCE006F64F1 /* AppIconGold@3x.png */,
 				883794F71F2E211000C6A495 /* AppIconRed@2x.png */,
@@ -446,14 +434,12 @@
 				TargetAttributes = {
 					881FF00C1D60F627003AC1AC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = Z44L282QM9;
 						DevelopmentTeamName = "Qsysmine S. (Personal Team)";
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					883285631E2926EB00CA9839 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Z44L282QM9;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -464,7 +450,6 @@
 					};
 					88BC439A1D5FCF5300FFBDEF = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = Z44L282QM9;
 						DevelopmentTeamName = "Qsysmine S. (Personal Team)";
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
@@ -489,7 +474,7 @@
 				};
 			};
 			buildConfigurationList = 88BC43961D5FCF5300FFBDEF /* Build configuration list for PBXProject "bellSchedule" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -535,20 +520,16 @@
 			files = (
 				885B67AA1FBDDDCE006F64F1 /* AppIconGold@3x.png in Resources */,
 				88BC43A91D5FCF5400FFBDEF /* LaunchScreen.storyboard in Resources */,
-				88039FEE1F2E2D6F006BCB89 /* AppIconBlack@3x.png in Resources */,
 				883794F91F2E211000C6A495 /* AppIconRed@2x.png in Resources */,
 				885B67AB1FBDDDCE006F64F1 /* AppIconGold@2x.png in Resources */,
 				883794F31F2E210800C6A495 /* AppIconBlue@2x.png in Resources */,
 				885B67A31FBDDCCE006F64F1 /* AppIconSilver@3x.png in Resources */,
 				885B67A21FBDDCCE006F64F1 /* AppIconSilver@2x.png in Resources */,
 				885B679F1FBDDCC1006F64F1 /* AppIconWhite@2x.png in Resources */,
-				88039FEF1F2E2D6F006BCB89 /* AppIconBlack@2x.png in Resources */,
-				885B67A61FBDDCDA006F64F1 /* AppIconWhite@3x.png in Resources */,
 				88BC43A61D5FCF5400FFBDEF /* Assets.xcassets in Resources */,
 				885B679E1FBDDCC1006F64F1 /* AppIconWhite@3x.png in Resources */,
 				883794F51F2E210800C6A495 /* AppIconBlue@3x.png in Resources */,
 				883794FB1F2E211000C6A495 /* AppIconRed@3x.png in Resources */,
-				885B67A71FBDDCDA006F64F1 /* AppIconWhite@2x.png in Resources */,
 				88BC43A41D5FCF5400FFBDEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,19 +636,23 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Z44L282QM9;
+				DEVELOPMENT_TEAM = 6EUGAYNT37;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BellScheduleDataKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.BellScheduleDataKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -681,19 +666,23 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Z44L282QM9;
+				DEVELOPMENT_TEAM = 6EUGAYNT37;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BellScheduleDataKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.BellScheduleDataKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -704,15 +693,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BellScheduleWidget/BellScheduleWidget.entitlements;
-				DEVELOPMENT_TEAM = Z44L282QM9;
+				DEVELOPMENT_TEAM = 6EUGAYNT37;
 				INFOPLIST_FILE = BellScheduleWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule.BellScheduleWidget;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule.BellScheduleWidget1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -720,15 +713,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BellScheduleWidget/BellScheduleWidget.entitlements;
-				DEVELOPMENT_TEAM = Z44L282QM9;
+				DEVELOPMENT_TEAM = 6EUGAYNT37;
 				INFOPLIST_FILE = BellScheduleWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule.BellScheduleWidget;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule.BellScheduleWidget1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -781,13 +778,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -834,11 +831,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -847,17 +845,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLY_RULES_IN_COPY_FILES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = bellSchedule/bellSchedule.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = Z44L282QM9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bellSchedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -866,17 +868,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLY_RULES_IN_COPY_FILES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = bellSchedule/bellSchedule.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = Z44L282QM9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bellSchedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Stassinopoulos.Ari.bellSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -18,7 +18,7 @@ class StylisedNavigationController: UINavigationController {
 		let foregroundColour: UIColor = (isWhite ? .black : .white)
 		let statusBarStyle: UIStatusBarStyle = (isWhite ? .default : .lightContent);
 		self.navigationBar.barTintColor = bgColour;
-		self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: foregroundColour];
+		self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: foregroundColour];
 		self.navigationBar.tintColor = foregroundColour;
 		UIApplication.shared.statusBarStyle = statusBarStyle;
 
@@ -36,7 +36,7 @@ class StylisedNavigationController: UINavigationController {
 		UIView.transition(with: self.navigationBar, duration: 0.5, options: [.beginFromCurrentState, .transitionCrossDissolve], animations: { () -> Void in
 			UIApplication.shared.statusBarStyle = statusBarStyle;
 			self.navigationBar.barTintColor = bgColour;
-			self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: foregroundColour];
+			self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: foregroundColour];
 			self.navigationBar.tintColor = foregroundColour;
 		}, completion: nil)
 	}
