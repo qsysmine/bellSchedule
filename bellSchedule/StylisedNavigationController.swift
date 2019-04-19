@@ -31,15 +31,19 @@ class StylisedNavigationController: UINavigationController {
 		let bgColour = Settings.getColour();
 		let isWhite = Settings.getColourType() == .white;
 		let foregroundColour: UIColor = (isWhite ? .black : .white)
-		let statusBarStyle: UIStatusBarStyle = (isWhite ? .default : .lightContent);
+		//let statusBarStyle: UIStatusBarStyle = (isWhite ? .default : .lightContent);
 		UIView.animate(withDuration: 0.5, animations: {
 			self.navigationBar.barTintColor = bgColour;
 		});
 		UIView.transition(with: self.navigationBar, duration: 0.5, options: [.beginFromCurrentState, .transitionCrossDissolve], animations: { () -> Void in
-			UIApplication.shared.statusBarStyle = statusBarStyle;
+			//UIApplication.shared.statusBarStyle = statusBarStyle;
 			self.navigationBar.barTintColor = bgColour;
 			self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: foregroundColour];
 			self.navigationBar.tintColor = foregroundColour;
+			//set statusBarStyle here as preferred style
+			var preferredStatusBarStyle : UIStatusBarStyle {
+				return isWhite ? .default : .lightContent
+			}
 		}, completion: nil)
 	}
 	
