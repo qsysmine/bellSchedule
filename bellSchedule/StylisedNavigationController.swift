@@ -16,11 +16,13 @@ class StylisedNavigationController: UINavigationController {
 		let bgColour = Settings.getColour();
 		let isWhite = Settings.getColourType() == .white;
 		let foregroundColour: UIColor = (isWhite ? .black : .white)
-		let statusBarStyle: UIStatusBarStyle = (isWhite ? .default : .lightContent);
+		//let statusBarStyle: UIStatusBarStyle = (isWhite ? .default : .lightContent);
 		self.navigationBar.barTintColor = bgColour;
 		self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: foregroundColour];
 		self.navigationBar.tintColor = foregroundColour;
-		UIApplication.shared.statusBarStyle = statusBarStyle;
+		var preferredStatusBarStyle : UIStatusBarStyle {
+			return isWhite ? .default : .lightContent
+		}
 
 		// Do any additional setup after loading the view.
 	}
