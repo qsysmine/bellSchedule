@@ -472,8 +472,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-Ud-oe4">
-                                                    <rect key="frame" x="8" y="7" width="359" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-Ud-oe4">
+                                                    <rect key="frame" x="8" y="8.0000000000001137" width="359" height="30"/>
                                                     <state key="normal" title="Send feedback"/>
                                                     <connections>
                                                         <action selector="sendFeedback:" destination="RgI-ZO-lAd" eventType="touchUpInside" id="og3-if-LT4"/>

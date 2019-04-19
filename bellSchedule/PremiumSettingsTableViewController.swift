@@ -64,6 +64,7 @@ class PremiumSettingsTableViewController: UITableViewController, SKProductsReque
                 SKPaymentQueue.default().finishTransaction(transaction)
                 self.getPremiumButton.isEnabled = true;
                 failed();
+			@unknown default: break
             }
         }
     }
