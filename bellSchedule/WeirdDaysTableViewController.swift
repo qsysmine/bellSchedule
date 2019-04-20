@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import BellScheduleDataKit
 
 class WeirdDaysTableViewController: UITableViewController {
-
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		//self.tableView.register(UINib(nibName: "forecastCell", bundle: nil), forCellReuseIdentifier: "forecastCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -32,15 +33,15 @@ class WeirdDaysTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell", for: indexPath);
 
         // Configure the cell...
 
         return cell
     }
-    */
+	
 
     /*
     // Override to support conditional editing of the table view.

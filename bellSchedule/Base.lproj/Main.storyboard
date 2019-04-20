@@ -110,7 +110,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFp-3w-CTB">
-                                <rect key="frame" x="133" y="581" width="92" height="34"/>
+                                <rect key="frame" x="141" y="582" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Weird Days"/>
@@ -530,7 +530,7 @@
             </objects>
             <point key="canvasLocation" x="1248.8" y="696.05911330049264"/>
         </scene>
-        <!--Settings-->
+        <!--Weird Days-->
         <scene sceneID="zJS-K6-KHw">
             <objects>
                 <tableViewController id="8wr-b9-kCO" customClass="WeirdDaysTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
@@ -538,41 +538,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="yes" id="g4q-uQ-576">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedbackCell" id="WD1-Xi-JbC" userLabel="feedbackCell">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WD1-Xi-JbC" id="HN6-8o-ZLY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-Xp-efx">
-                                                    <rect key="frame" x="8" y="8.0000000000001137" width="359" height="30"/>
-                                                    <state key="normal" title="hello"/>
-                                                    <connections>
-                                                        <action selector="sendFeedback:" destination="8wr-b9-kCO" eventType="touchUpInside" id="o2p-K3-el4"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Kar-Xp-efx" firstAttribute="leading" secondItem="HN6-8o-ZLY" secondAttribute="leadingMargin" id="AYl-rd-f39"/>
-                                                <constraint firstItem="Kar-Xp-efx" firstAttribute="centerY" secondItem="HN6-8o-ZLY" secondAttribute="centerY" id="bNo-6l-2Nz"/>
-                                                <constraint firstItem="Kar-Xp-efx" firstAttribute="trailing" secondItem="HN6-8o-ZLY" secondAttribute="trailingMargin" id="tVS-yv-a5N"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <view key="tableFooterView" contentMode="scaleAspectFill" id="5vM-Tu-soV">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="643"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXr-Na-4aq">
+                                    <rect key="frame" x="17" y="37" width="40" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.4277186393737793" green="0.42709898948669434" blue="0.44706213474273682" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f77-t0-iq1">
+                                    <rect key="frame" x="0.0" y="61" width="375" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K1-ij-WoQ">
+                                            <rect key="frame" x="8" y="5" width="106" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="This is a button"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.9215659499168396" green="0.92155158519744873" blue="0.92156952619552612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="8wr-b9-kCO" id="rap-0z-0CT"/>
                             <outlet property="delegate" destination="8wr-b9-kCO" id="hHg-nt-zVA"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Settings" id="Is5-0s-vpt">
+                    <navigationItem key="navigationItem" title="Weird Days" id="Is5-0s-vpt">
                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_drop_down_white" id="KC9-Bm-Z30">
                             <connections>
                                 <segue destination="lts-KN-oM5" kind="unwind" unwindAction="unwindToMainScreenWithSender:" id="giz-sM-Pru"/>
@@ -581,10 +580,10 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hb2-ym-7KE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lts-KN-oM5" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb2-ym-7KE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-727" y="748"/>
+            <point key="canvasLocation" x="-727.20000000000005" y="747.78325123152717"/>
         </scene>
         <!--Premium Settings-->
         <scene sceneID="eUP-hC-7DP">
@@ -855,7 +854,6 @@
         <!--Stylised Navigation Controller-->
         <scene sceneID="Dyw-gK-YlV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rbo-gq-goX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Ohz-PV-tZS" customClass="StylisedNavigationController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tet-Qt-xhI">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -865,13 +863,13 @@
                         <segue destination="RgI-ZO-lAd" kind="relationship" relationship="rootViewController" id="l3F-7q-xlB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbo-gq-goX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="266" y="748"/>
         </scene>
         <!--Stylised Navigation Controller-->
         <scene sceneID="nb1-qV-wU4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nIT-iR-bxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="75b-fi-akM" customClass="StylisedNavigationController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kDR-pQ-MFD">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -881,6 +879,7 @@
                         <segue destination="8wr-b9-kCO" kind="relationship" relationship="rootViewController" id="zz6-go-41A"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIT-iR-bxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1551" y="748"/>
         </scene>
