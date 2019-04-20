@@ -110,9 +110,10 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFp-3w-CTB">
-                                <rect key="frame" x="155" y="582" width="46" height="30"/>
+                                <rect key="frame" x="133" y="581" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Weird Days"/>
                                 <connections>
                                     <action selector="weirdDays:" destination="fWv-pW-tOY" eventType="touchUpInside" id="Ahe-SX-8rb"/>
                                 </connections>
@@ -150,7 +151,7 @@
                         <outlet property="promoView" destination="Wqr-RV-ycw" id="06w-Ks-66h"/>
                         <outlet property="settingsButton" destination="6rv-3q-DNF" id="VoT-GU-gaw"/>
                         <outlet property="startText" destination="WNy-Lk-B0Z" id="Iwq-Gg-2JL"/>
-                        <segue destination="s02-fq-FaV" kind="presentation" identifier="weirdDaysSegue" id="kGg-o9-K9v"/>
+                        <segue destination="75b-fi-akM" kind="presentation" identifier="weirdDaysSegue" id="hVJ-KP-gGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ch-Ir-mHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -529,6 +530,62 @@
             </objects>
             <point key="canvasLocation" x="1248.8" y="696.05911330049264"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="zJS-K6-KHw">
+            <objects>
+                <tableViewController id="8wr-b9-kCO" customClass="WeirdDaysTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Tne-FX-OpB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="yes" id="g4q-uQ-576">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedbackCell" id="WD1-Xi-JbC" userLabel="feedbackCell">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WD1-Xi-JbC" id="HN6-8o-ZLY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-Xp-efx">
+                                                    <rect key="frame" x="8" y="8.0000000000001137" width="359" height="30"/>
+                                                    <state key="normal" title="hello"/>
+                                                    <connections>
+                                                        <action selector="sendFeedback:" destination="8wr-b9-kCO" eventType="touchUpInside" id="o2p-K3-el4"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kar-Xp-efx" firstAttribute="leading" secondItem="HN6-8o-ZLY" secondAttribute="leadingMargin" id="AYl-rd-f39"/>
+                                                <constraint firstItem="Kar-Xp-efx" firstAttribute="centerY" secondItem="HN6-8o-ZLY" secondAttribute="centerY" id="bNo-6l-2Nz"/>
+                                                <constraint firstItem="Kar-Xp-efx" firstAttribute="trailing" secondItem="HN6-8o-ZLY" secondAttribute="trailingMargin" id="tVS-yv-a5N"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8wr-b9-kCO" id="rap-0z-0CT"/>
+                            <outlet property="delegate" destination="8wr-b9-kCO" id="hHg-nt-zVA"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" id="Is5-0s-vpt">
+                        <barButtonItem key="leftBarButtonItem" image="ic_arrow_drop_down_white" id="KC9-Bm-Z30">
+                            <connections>
+                                <segue destination="lts-KN-oM5" kind="unwind" unwindAction="unwindToMainScreenWithSender:" id="giz-sM-Pru"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb2-ym-7KE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lts-KN-oM5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-727" y="748"/>
+        </scene>
         <!--Premium Settings-->
         <scene sceneID="eUP-hC-7DP">
             <objects>
@@ -636,7 +693,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ei-fx-Kc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2214" y="697"/>
+            <point key="canvasLocation" x="2127" y="696"/>
         </scene>
         <!--Notifications Settings-->
         <scene sceneID="ggJ-58-8Pq">
@@ -795,37 +852,10 @@
             </objects>
             <point key="canvasLocation" x="1249" y="1421"/>
         </scene>
-        <!--Weird Days Table View Controller-->
-        <scene sceneID="hMl-ka-cyd">
-            <objects>
-                <tableViewController id="s02-fq-FaV" customClass="WeirdDaysTableViewController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2v4-rI-XMS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HrB-vx-uLK">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HrB-vx-uLK" id="Z7n-sM-uMj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="s02-fq-FaV" id="j3W-0e-Z7J"/>
-                            <outlet property="delegate" destination="s02-fq-FaV" id="AzN-Ne-T2U"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9dW-T7-vre" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-585" y="697"/>
-        </scene>
         <!--Stylised Navigation Controller-->
         <scene sceneID="Dyw-gK-YlV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbo-gq-goX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Ohz-PV-tZS" customClass="StylisedNavigationController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tet-Qt-xhI">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -835,9 +865,24 @@
                         <segue destination="RgI-ZO-lAd" kind="relationship" relationship="rootViewController" id="l3F-7q-xlB"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rbo-gq-goX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="697"/>
+            <point key="canvasLocation" x="266" y="748"/>
+        </scene>
+        <!--Stylised Navigation Controller-->
+        <scene sceneID="nb1-qV-wU4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIT-iR-bxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="75b-fi-akM" customClass="StylisedNavigationController" customModule="bellSchedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kDR-pQ-MFD">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8wr-b9-kCO" kind="relationship" relationship="rootViewController" id="zz6-go-41A"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1551" y="748"/>
         </scene>
     </scenes>
     <resources>
